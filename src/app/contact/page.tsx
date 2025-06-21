@@ -1,9 +1,11 @@
-import { pages } from "@/content/content";
+import { pages } from '@/content/content'
 
 export default function Contact() {
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold text-center mb-8">{pages.contact.title}</h1>
+      <h1 className="text-4xl font-bold text-center mb-8">
+        {pages.contact.title}
+      </h1>
       <p className="text-lg text-center text-gray-600 mb-6">
         {pages.contact.subtitle}
       </p>
@@ -12,7 +14,7 @@ export default function Contact() {
           {pages.contact.description}
         </p>
       )}
-      
+
       <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-md p-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
@@ -34,5 +36,5 @@ export default function Contact() {
         </div>
       </div>
     </div>
-  );
-} 
+  )
+}

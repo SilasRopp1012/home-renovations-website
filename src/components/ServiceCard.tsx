@@ -8,16 +8,21 @@ interface ServiceCardProps {
   features?: string[]
 }
 
-export default function ServiceCard({ title, description, imageUrl, features }: ServiceCardProps) {
+export default function ServiceCard({
+  title,
+  description,
+  imageUrl,
+  features,
+}: ServiceCardProps) {
   const handleKeyDown = (event: React.KeyboardEvent) => {
     if (event.key === 'Enter' || event.key === ' ') {
-      event.preventDefault();
+      event.preventDefault()
       // Add click handler logic here if needed
     }
-  };
+  }
 
   return (
-    <div 
+    <div
       className="bg-white rounded-lg shadow-md overflow-hidden focus-within:ring-2 focus-within:ring-blue-500"
       tabIndex={0}
       role="article"
@@ -26,14 +31,14 @@ export default function ServiceCard({ title, description, imageUrl, features }: 
     >
       {imageUrl && (
         <div className="h-48 bg-gray-200 relative">
-          <Image 
-            src={imageUrl} 
-            alt={title} 
+          <Image
+            src={imageUrl}
+            alt={title}
             fill
             className="object-cover"
             onError={(e) => {
-              const target = e.target as HTMLImageElement;
-              target.src = images.fallback;
+              const target = e.target as HTMLImageElement
+              target.src = images.fallback
             }}
           />
         </div>
@@ -46,9 +51,14 @@ export default function ServiceCard({ title, description, imageUrl, features }: 
             <h4 className="text-sm font-medium text-gray-800 mb-2">
               {serviceCard.featuresLabel}
             </h4>
-            <ul className="list-disc list-inside text-sm text-gray-500" role="list">
+            <ul
+              className="list-disc list-inside text-sm text-gray-500"
+              role="list"
+            >
               {features.map((feature, index) => (
-                <li key={index} role="listitem">{feature}</li>
+                <li key={index} role="listitem">
+                  {feature}
+                </li>
               ))}
             </ul>
           </div>
@@ -56,4 +66,4 @@ export default function ServiceCard({ title, description, imageUrl, features }: 
       </div>
     </div>
   )
-} 
+}

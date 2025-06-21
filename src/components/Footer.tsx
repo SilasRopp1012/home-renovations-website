@@ -1,4 +1,4 @@
-import { footer } from '@/content/content';
+import { footer } from '@/content/content'
 
 export default function Footer() {
   return (
@@ -10,5 +10,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  );
-} 
+  )
+}

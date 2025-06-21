@@ -25,9 +25,9 @@ export default function ProjectGallery({ projects }: ProjectGalleryProps) {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {projects.map(project => (
-        <div 
-          key={project.id} 
+      {projects.map((project) => (
+        <div
+          key={project.id}
           className="bg-white rounded-lg shadow-md overflow-hidden focus-within:ring-2 focus-within:ring-blue-500"
           tabIndex={0}
           role="article"
@@ -36,9 +36,9 @@ export default function ProjectGallery({ projects }: ProjectGalleryProps) {
           <div className="flex h-48">
             {project.beforeImage && (
               <div className="w-1/2 bg-gray-200 relative">
-                <Image 
-                  src={project.beforeImage} 
-                  alt={`${project.title} - ${projectGallery.beforeLabel}`} 
+                <Image
+                  src={project.beforeImage}
+                  alt={`${project.title} - ${projectGallery.beforeLabel}`}
                   fill
                   className="object-cover"
                   onError={(e) => {
@@ -53,9 +53,9 @@ export default function ProjectGallery({ projects }: ProjectGalleryProps) {
             )}
             {project.afterImage && (
               <div className="w-1/2 bg-gray-200 relative">
-                <Image 
-                  src={project.afterImage} 
-                  alt={`${project.title} - ${projectGallery.afterLabel}`} 
+                <Image
+                  src={project.afterImage}
+                  alt={`${project.title} - ${projectGallery.afterLabel}`}
                   fill
                   className="object-cover"
                   onError={(e) => {
@@ -80,4 +80,4 @@ export default function ProjectGallery({ projects }: ProjectGalleryProps) {
       ))}
     </div>
   )
-} 
+}
