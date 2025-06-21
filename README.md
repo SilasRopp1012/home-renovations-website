@@ -1,36 +1,152 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Home Renovations Website
 
-## Getting Started
+A modern, responsive website built with Next.js 15, TypeScript, and Tailwind CSS for showcasing home renovation services.
 
-First, run the development server:
+## 🏗️ Project Structure
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+src/
+├── app/                    # Next.js App Router pages
+│   ├── layout.tsx         # Root layout with Header/Footer
+│   ├── page.tsx           # Home page
+│   ├── about/page.tsx     # About page
+│   ├── services/page.tsx  # Services page
+│   ├── portfolio/page.tsx # Portfolio page
+│   └── contact/page.tsx   # Contact page
+├── components/            # Reusable React components
+│   ├── Header.tsx         # Navigation header
+│   ├── Footer.tsx         # Site footer
+│   ├── Layout.tsx         # Optional layout helper
+│   ├── ServiceCard.tsx    # Service display component
+│   └── ProjectGallery.tsx # Portfolio project gallery
+├── content/               # Structured data files
+│   ├── services.json      # Service offerings data
+│   └── portfolio.json     # Portfolio projects data
+└── utils/                 # Helper functions
+    ├── formatters.ts      # Date and text formatting utilities
+    └── index.ts          # Utility exports
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Installation
 
-## Learn More
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Open your browser:**
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📝 Available Scripts
 
-## Deploy on Vercel
+- `npm run dev` - Start development server with Turbopack
+- `npm run build` - Build production application
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+- `npm run format` - Format code with Prettier
+- `npm run format:check` - Check code formatting
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🎨 Tech Stack
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Framework:** Next.js 15 with App Router
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Linting:** ESLint
+- **Formatting:** Prettier
+- **Images:** Next.js Image component for optimization
+
+## 🖼️ Adding Images
+
+Add your project images to the `public/images/` directory:
+
+### Service Images
+- `kitchen-remodel.jpg`
+- `bathroom-renovation.jpg`
+- `home-addition.jpg`
+- `flooring.jpg`
+- `exterior-remodel.jpg`
+
+### Portfolio Before/After Images
+- `kitchen-before-1.jpg` / `kitchen-after-1.jpg`
+- `bathroom-before-1.jpg` / `bathroom-after-1.jpg`
+- `addition-before-1.jpg` / `addition-after-1.jpg`
+- `flooring-before-1.jpg` / `flooring-after-1.jpg`
+- `exterior-before-1.jpg` / `exterior-after-1.jpg`
+- `master-before-1.jpg` / `master-after-1.jpg`
+
+## 📊 Content Management
+
+### Services Data
+Edit `src/content/services.json` to update:
+- Service titles and descriptions
+- Feature lists
+- Image paths
+
+### Portfolio Data  
+Edit `src/content/portfolio.json` to update:
+- Project information
+- Before/after image paths
+- Project categories and locations
+
+## 🛠️ Customization
+
+### Adding New Pages
+1. Create a new folder in `src/app/`
+2. Add a `page.tsx` file with your component
+3. Update navigation in `src/components/Header.tsx`
+
+### Adding New Components
+1. Create component files in `src/components/`
+2. Use TypeScript interfaces for props
+3. Import and use in your pages
+
+### Styling
+- Uses Tailwind CSS utility classes
+- Global styles in `src/app/globals.css`
+- Component-level styling with className
+
+## 🚀 Deployment
+
+### Vercel (Recommended)
+1. Push code to GitHub
+2. Connect repository to Vercel
+3. Deploy automatically
+
+### Other Platforms
+1. Build the application: `npm run build`
+2. Deploy the `.next` folder and `public` directory
+3. Set up environment variables if needed
+
+## 📋 Next Steps
+
+After setting up the base framework:
+
+1. **Add Real Content:** Replace placeholder content with actual services and projects
+2. **Implement Contact Form:** Add form handling for the contact page  
+3. **SEO Optimization:** Add meta tags, structured data, and sitemaps
+4. **Performance:** Optimize images and implement loading strategies
+5. **Analytics:** Add Google Analytics or other tracking
+6. **CMS Integration:** Consider headless CMS for content management
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Run tests and linting
+5. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License.

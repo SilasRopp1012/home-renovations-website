@@ -1,0 +1,44 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+Purpose:
+Ensure all website text content is managed in one place for consistency, easier updates, and potential localization.
+
+Rule:
+All user-facing text (like headings, paragraphs, button labels, and messages) must be defined in the @content.ts file. Other files — including page components and UI elements — must not contain hardcoded or raw text directly. Instead, they should reference content by importing it from content.ts.
+
+What This Includes:
+
+Titles and subtitles
+
+Descriptions and body text
+
+Button or link text
+
+Tooltips, popups, banners, etc.
+
+Photos:
+In addition to the content, all photos should be found in the same place as well, and referenced from that file to make editing content as easy as possible
+
+Exceptions:
+
+Developer-focused messages such as console logs or internal debug text
+
+Temporary placeholders during initial development (if clearly marked and documented)
+
+Why This Matters:
+
+Makes content updates easier and safer
+
+Keeps all content organized and searchable
+
+Supports scalability and internationalization
+
+Enforcement:
+
+Review all pull requests to ensure no new raw text is added to page or component files
+
+Refactor any hardcoded content into the central content.ts file
+

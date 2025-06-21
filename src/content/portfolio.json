@@ -1,0 +1,64 @@
+{
+  "projects": [
+    {
+      "id": "modern-kitchen-makeover",
+      "title": "Modern Kitchen Makeover",
+      "description": "Complete kitchen transformation with custom cabinets, quartz countertops, and stainless steel appliances.",
+      "category": "Kitchen Remodeling",
+      "beforeImage": "/images/kitchen-before-1.jpg",
+      "afterImage": "/images/kitchen-after-1.jpg",
+      "completedDate": "2024-01-15",
+      "location": "San Francisco, CA"
+    },
+    {
+      "id": "luxury-bathroom-renovation",
+      "title": "Luxury Bathroom Renovation",
+      "description": "Spa-inspired bathroom with marble tiles, rainfall shower, and modern vanity.",
+      "category": "Bathroom Renovation",
+      "beforeImage": "/images/bathroom-before-1.jpg",
+      "afterImage": "/images/bathroom-after-1.jpg",
+      "completedDate": "2024-02-20",
+      "location": "Oakland, CA"
+    },
+    {
+      "id": "family-room-addition",
+      "title": "Family Room Addition",
+      "description": "Spacious family room addition with vaulted ceilings and large windows.",
+      "category": "Home Additions",
+      "beforeImage": "/images/addition-before-1.jpg",
+      "afterImage": "/images/addition-after-1.jpg",
+      "completedDate": "2023-12-10",
+      "location": "Berkeley, CA"
+    },
+    {
+      "id": "hardwood-floor-installation",
+      "title": "Hardwood Floor Installation",
+      "description": "Beautiful oak hardwood flooring throughout the main living areas.",
+      "category": "Flooring Installation",
+      "beforeImage": "/images/flooring-before-1.jpg",
+      "afterImage": "/images/flooring-after-1.jpg",
+      "completedDate": "2024-03-05",
+      "location": "San Jose, CA"
+    },
+    {
+      "id": "exterior-home-refresh",
+      "title": "Exterior Home Refresh",
+      "description": "New siding, windows, and front porch renovation for improved curb appeal.",
+      "category": "Exterior Remodeling",
+      "beforeImage": "/images/exterior-before-1.jpg",
+      "afterImage": "/images/exterior-after-1.jpg",
+      "completedDate": "2023-11-30",
+      "location": "Palo Alto, CA"
+    },
+    {
+      "id": "master-suite-renovation",
+      "title": "Master Suite Renovation",
+      "description": "Complete master bedroom and bathroom renovation with walk-in closet.",
+      "category": "Bathroom Renovation",
+      "beforeImage": "/images/master-before-1.jpg",
+      "afterImage": "/images/master-after-1.jpg",
+      "completedDate": "2024-01-28",
+      "location": "Mountain View, CA"
+    }
+  ]
+} 

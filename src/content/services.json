@@ -1,0 +1,69 @@
+{
+  "services": [
+    {
+      "id": "kitchen-remodeling",
+      "title": "Kitchen Remodeling",
+      "description": "Transform your kitchen with modern designs, quality materials, and expert craftsmanship.",
+      "features": [
+        "Custom cabinet installation",
+        "Countertop replacement",
+        "Modern appliance integration",
+        "Lighting design",
+        "Flooring installation"
+      ],
+      "imageUrl": "/images/kitchen-remodel.jpg"
+    },
+    {
+      "id": "bathroom-renovation",
+      "title": "Bathroom Renovation",
+      "description": "Create a spa-like experience with luxurious bathroom renovations tailored to your needs.",
+      "features": [
+        "Tile installation",
+        "Vanity and sink replacement",
+        "Shower and tub upgrades",
+        "Modern fixtures",
+        "Lighting improvements"
+      ],
+      "imageUrl": "/images/bathroom-renovation.jpg"
+    },
+    {
+      "id": "home-additions",
+      "title": "Home Additions",
+      "description": "Expand your living space with professionally designed and built home additions.",
+      "features": [
+        "Room additions",
+        "Second story additions",
+        "Garage conversions",
+        "Sunroom installations",
+        "Basement finishing"
+      ],
+      "imageUrl": "/images/home-addition.jpg"
+    },
+    {
+      "id": "flooring-installation",
+      "title": "Flooring Installation",
+      "description": "Upgrade your floors with a wide variety of materials and professional installation.",
+      "features": [
+        "Hardwood flooring",
+        "Tile installation",
+        "Carpet replacement",
+        "Laminate flooring",
+        "Vinyl plank flooring"
+      ],
+      "imageUrl": "/images/flooring.jpg"
+    },
+    {
+      "id": "exterior-remodeling",
+      "title": "Exterior Remodeling",
+      "description": "Enhance your home's curb appeal and value with exterior renovation services.",
+      "features": [
+        "Siding replacement",
+        "Window installation",
+        "Roofing services",
+        "Deck and patio construction",
+        "Landscaping integration"
+      ],
+      "imageUrl": "/images/exterior-remodel.jpg"
+    }
+  ]
+} 
