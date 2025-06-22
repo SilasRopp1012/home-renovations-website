@@ -160,7 +160,7 @@ export interface SocialLink {
 export const aboutSection = {
   title: "North Carolina's Best Construction & Renovation Services",
   paragraph: "We offer the highest quality workmanship & excellence in customer service! Horizon Renovations LLC is a Pittsboro, NC based new home construction, renovation and improvement company. We specialize in everything from custom design and build and whole house renovations to kitchen and bathroom remodeling. We also offer many other valuable services that other contractors do not, such as custom cabinetry for our customers and independent contractors.",
-  image: "/images/about-horizon.jpg"
+  image: "/images/team.jpg"
 } as const;
 
 export const siteContent = {
@@ -474,42 +474,56 @@ export const aboutPage = {
       "The mission of Horizon Renovations LLC is to ensure complete satisfaction for our clients, both homeowner and building contractor, with quality service and products by offering the most positive experience in design and installation.",
       "Our staff provides friendly, active, and personal service, and has an unmatched dedication to staying current on design trends and product innovations."
     ],
-    image: "/images/about-mission.jpg",
+    image: "/images/our-mission.webp",
     imageAlt: "Horizon Renovations team at work"
+  },
+  whyChooseUs: {
+    title: "Why Choose Horizon Renovations?",
+    reasons: [
+      {
+        title: "Experience & Trust",
+        icon: "shield", // For licensed/trusted
+        description: "With over 40 years of combined experience, we are a NC Licensed General Contractor (#70467) with full liability and workers' compensation insurance. As a local, family-owned business serving Central North Carolina communities, we've built our reputation on integrity, reliability, and exceptional craftsmanship that you can trust."
+      },
+      {
+        title: "Quality Craftsmanship",
+        icon: "hammer", // For craftsmanship
+        description: "Our skilled craftsmen are employees, not subcontractors, ensuring consistent quality and accountability on every project. We take pride in our attention to detail and use only quality materials. From design to completion, we maintain the highest standards of workmanship that exceed expectations."
+      },
+      {
+        title: "Complete Solutions",
+        icon: "home", // For full-service
+        description: "We offer comprehensive design-build services under one roof, from custom homes and renovations to custom cabinetry. Our Downtown Pittsboro showroom features over 3,000 inventory items including cabinets, countertops, tile, fixtures, and more, making us your one-stop solution for all home improvement needs."
+      }
+    ]
   },
   leadership: {
     title: "Meet the Owners",
     paragraphs: [
-      "Horizon Renovations is led by owners and brothers, Kevin Frazier & Chris Frazier. They have over 40 years of experience in luxury residential remodeling and new construction in Chatham and Orange Counties.",
-      "In addition, they specialize in custom built cabinetry and have a custom cabinet shop in Chatham County."
+      "Horizon Renovations is led by owners and brothers, Kevin Frazier & Chris Frazier. We have over 40 years of experience in luxury residential remodeling and new construction in the Central North Carolina area.",
+      "In addition, we specialize in custom built cabinetry and have a showroom in Pittsboro, NC."
     ],
-    image: "/images/kevin-chris-frazier.jpg",
-    imageAlt: "Kevin and Chris Frazier, owners of Horizon Renovations"
+    image: "/images/team.jpg",
+    imageAlt: "Kevin and Chris Frazier with the Horizon Renovations team"
   },
   showroom: {
     title: "Visit Our Showroom",
-    description: "Our Showroom located in Downtown Pittsboro showcases fully functional custom built kitchens AND over 3,000 inventory items ranging from cabinets, countertops, tile, sinks, faucets, showers, knobs & pulls, HW floors, carpeting, lighting, A/V equipment, ceiling fans as well as intricate woodworking finishes with our moldings, arches and columns.",
-    features: [
-      'Custom Built Kitchens',
-      'Cabinets',
-      'Countertops', 
-      'Tile',
-      'Sinks & Faucets',
-      'Showers',
-      'Knobs & Pulls',
-      'Hardwood Floors',
-      'Carpeting',
-      'Lighting',
-      'A/V Equipment',
-      'Ceiling Fans',
-      'Moldings',
-      'Arches & Columns'
+    paragraphs: [
+      "Our Showroom located in Downtown Pittsboro showcases fully functional custom built kitchens AND over 3,000 inventory items ranging from cabinets, countertops, tile, sinks, faucets, showers, knobs & pulls, HW floors, carpeting, lighting, A/V equipment, ceiling fans as well as intricate woodworking finishes with our moldings, arches and columns."
     ],
-    address: {
-      street: "44 Hillsboro St Ste B",
-      city: "Pittsboro, NC 27312"
-    },
-    ctaButton: "Visit Our Showroom"
+    image: "/images/showroom.webp",
+    imageAlt: "Horizon Renovations Showroom",
+    address: "44 Hillsboro St Ste B, Pittsboro, NC 27312"
+  },
+  finalCta: {
+    title: "Ready to Transform Your Home?",
+    subtitle: "Contact us today for your free consultation and quote",
+    description: "Whether you're planning a complete home renovation, custom cabinetry, or building your dream home, our experienced team is ready to bring your vision to life.",
+    phone: "(919) 542-4442",
+    ctaButtons: {
+      primary: "Get Free Quote",
+      secondary: "View Our Services"
+    }
   },
   experience: {
     title: "Our Experience",

@@ -106,10 +106,9 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <h3 className="text-lg font-bold mb-3 text-cream/90">Come Visit Our Showroom!</h3>
             <div className="mb-3">
-              <p className="text-xs text-cream/70 mb-2">44 Hillsboro St Ste B</p>
-              <p className="text-xs text-cream/70">Pittsboro, NC 27312</p>
+              <p className="text-xs text-cream/70">44 Hillsboro St Ste B, Pittsboro, NC 27312</p>
             </div>
-            <div className="w-full h-32 rounded-lg overflow-hidden">
+            <div className="w-full h-40 rounded-lg overflow-hidden">
               <iframe
                 src="https://maps.google.com/maps?q=44+Hillsboro+St+Ste+B,Pittsboro,NC+27312&output=embed&z=16"
                 width="100%"
