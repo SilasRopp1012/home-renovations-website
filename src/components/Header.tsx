@@ -4,7 +4,7 @@ import { navigation, images } from '@/content/content'
 
 export default function Header() {
   return (
-    <header className="bg-white shadow-lg">
+    <header className="sticky top-0 bg-white shadow-lg z-50">
       <nav
         className="container mx-auto px-4 py-2"
         role="navigation"
@@ -13,7 +13,7 @@ export default function Header() {
         <div className="flex justify-between items-center">
           <Link
             href="/"
-            className="flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-forest-green focus:ring-offset-2 rounded"
+            className="flex items-center space-x-2 focus:outline-none rounded"
             aria-label={navigation.links[0].ariaLabel}
           >
             <Image
@@ -31,7 +31,7 @@ export default function Header() {
               <li key={link.href} role="none">
                 <Link
                   href={link.href}
-                  className="text-gray-900 hover:text-green-800 transition-colors focus:outline-none rounded px-2 py-1 font-medium"
+                  className="text-gray-900 hover:text-brown-green transition-colors focus:outline-none rounded px-2 py-1 font-medium"
                   role="menuitem"
                   aria-label={link.ariaLabel}
                   tabIndex={0}

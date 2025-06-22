@@ -1,15 +1,24 @@
 @import 'tailwindcss';
 
+@theme {
+  --color-warm-brown: #8B4513;
+  --color-rich-brown: #654321;
+  --color-golden-tan: #D2B48C;
+  --color-warm-gold: #B8860B;
+  --color-bronze: #CD7F32;
+  --color-sage-green: #87A96B;
+  --color-deep-sage: #6B8E47;
+  --color-brown-green: #5F7A32;
+  --color-dark-brown-green: #526A2B;
+  --color-cream: #F5F5DC;
+  --color-warm-white: #FEFEF9;
+  --color-charcoal: #36454F;
+  --color-specials-bg: #F9F7F4;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,6 +36,16 @@ body {
 
 /* Custom Animations */
 @layer utilities {
+  /* Simple fade in animation */
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out forwards;
+  }
+
   /* Fade in up animation */
   @keyframes fade-in-up {
     0% {
@@ -109,6 +128,83 @@ body {
 
   .animate-testimonial-scroll {
     animation: testimonial-scroll 120s linear infinite;
+  }
+
+  @keyframes fade-in-once {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes bounce-continuous {
+    0%, 20%, 53%, 80%, 100% { 
+      transform: translateY(0); 
+    }
+    40%, 43% { 
+      transform: translateY(-10px); 
+    }
+  }
+  
+  .animate-fade-then-bounce {
+    opacity: 0;
+    animation: 
+      fade-in-once 0.8s ease-out 1.2s forwards,
+      bounce-continuous 1s ease-in-out 2s infinite;
+  }
+
+  /* Enhanced 3D Tilt Effect with base shine */
+  .tilt-card {
+    transform-style: preserve-3d;
+    transition: transform 0.15s ease-out;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Base shine - always visible */
+  .tilt-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(255,255,255,0.1) 0%,
+      rgba(255,255,255,0.15) 50%,
+      rgba(255,255,255,0.05) 100%
+    );
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+    border-radius: inherit;
+  }
+  
+  .tilt-card:hover::before {
+    opacity: 0.8;
+  }
+  
+  /* Dynamic shine overlay - follows mouse */
+  .tilt-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+      400px circle at var(--gradient-x, 50%) var(--gradient-y, 50%),
+      rgba(255,255,255,0.15) 0%,
+      rgba(255,255,255,0.08) 40%,
+      transparent 60%
+    );
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+    border-radius: inherit;
+  }
+  
+  .tilt-card:hover::after {
+    opacity: 1;
   }
 }
 

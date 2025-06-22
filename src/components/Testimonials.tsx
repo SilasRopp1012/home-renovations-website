@@ -22,10 +22,22 @@ export default function Testimonials() {
   const currentReview = testimonials.reviews[currentIndex]
 
   return (
-    <section className="bg-gray-50 py-16 lg:py-24">
-      <div className="container mx-auto px-4">
+    <section className="relative py-16 lg:py-24 overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-fixed"
+        style={{
+          backgroundImage: `url('/images/services/home-addition.jpg')`,
+        }}
+      />
+      
+      {/* Overlay for readability */}
+      <div className="absolute inset-0 bg-black/40" />
+      
+      {/* Content */}
+      <div className="relative z-10 container mx-auto px-4">
         <div className="text-center mb-12 lg:mb-16">
-          <h2 className="font-['Zodiak'] text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="font-['Zodiak'] text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
             {testimonials.title}
           </h2>
         </div>
@@ -33,34 +45,31 @@ export default function Testimonials() {
         {/* Testimonial Carousel */}
         <div className="max-w-4xl mx-auto">
           <div className="relative">
-            {/* Main testimonial card with larger fixed height */}
-            <div className="bg-white rounded-lg p-8 lg:p-12 shadow-lg h-[500px] lg:h-[600px] flex flex-col">
-              <div className="flex-1 flex flex-col justify-center">
-                <div className="mb-6">
-                  <svg className="w-12 h-12 text-yellow-400 mx-auto" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
-                  </svg>
-                </div>
-                
-                <div className="flex-1 flex items-center">
-                  <p className="text-gray-700 text-lg leading-relaxed italic text-center w-full overflow-y-auto max-h-80 lg:max-h-96">
+            {/* Main testimonial card */}
+            <div className="bg-white/95 backdrop-blur-sm rounded-lg p-8 lg:p-12 shadow-2xl h-[500px] lg:h-[550px] flex flex-col">
+              
+              {/* Text content with scrollable area */}
+              <div className="flex-1 flex items-center justify-center overflow-hidden">
+                <div className="w-full max-h-full overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent">
+                  <p className="text-gray-700 text-lg lg:text-xl leading-relaxed text-center px-4 py-2">
                     "{currentReview.text}"
                   </p>
                 </div>
               </div>
               
-              <div className="text-center border-t pt-6 mt-6">
-                <p className="font-semibold text-gray-900 text-lg">{currentReview.name}</p>
+              {/* Author info at bottom - fixed position */}
+              <div className="text-center border-t border-gray-200 pt-6 mt-6 flex-shrink-0">
+                <p className="font-semibold text-gray-900 text-lg lg:text-xl">{currentReview.name}</p>
                 {currentReview.location && (
-                  <p className="text-gray-600 mt-1">{currentReview.location}</p>
+                  <p className="text-gray-600 mt-1 text-base">{currentReview.location}</p>
                 )}
               </div>
             </div>
 
-            {/* Navigation arrows - moved further out with more padding */}
+            {/* Navigation arrows */}
             <button
               onClick={prevTestimonial}
-              className="absolute -left-6 lg:-left-12 top-1/2 transform -translate-y-1/2 p-4 text-gray-400 hover:text-green-800 transition-colors duration-300 cursor-pointer"
+              className="absolute -left-6 lg:-left-12 top-1/2 transform -translate-y-1/2 p-4 bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 hover:text-white transition-colors duration-200 cursor-pointer rounded-full"
               aria-label="Previous testimonial"
             >
               <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -70,7 +79,7 @@ export default function Testimonials() {
 
             <button
               onClick={nextTestimonial}
-              className="absolute -right-6 lg:-right-12 top-1/2 transform -translate-y-1/2 p-4 text-gray-400 hover:text-green-800 transition-colors duration-300 cursor-pointer"
+              className="absolute -right-6 lg:-right-12 top-1/2 transform -translate-y-1/2 p-4 bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 hover:text-white transition-colors duration-200 cursor-pointer rounded-full"
               aria-label="Next testimonial"
             >
               <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -85,10 +94,10 @@ export default function Testimonials() {
               <button
                 key={index}
                 onClick={() => goToTestimonial(index)}
-                className={`w-3 h-3 rounded-full transition-colors duration-300 cursor-pointer ${
+                className={`w-3 h-3 rounded-full transition-colors duration-200 cursor-pointer ${
                   index === currentIndex 
-                    ? 'bg-green-800' 
-                    : 'bg-gray-300 hover:bg-gray-400'
+                    ? 'bg-white shadow-lg' 
+                    : 'bg-white/50 hover:bg-white/70'
                 }`}
                 aria-label={`Go to testimonial ${index + 1}`}
               />
@@ -97,7 +106,7 @@ export default function Testimonials() {
 
           {/* Counter */}
           <div className="text-center mt-4">
-            <span className="text-sm text-gray-500">
+            <span className="text-sm text-white/80">
               {currentIndex + 1} of {testimonials.reviews.length}
             </span>
           </div>

@@ -27,7 +27,7 @@ export const pages = {
     title: "Your Future Home,", 
     titleSecond: "Built Right",
     subtitle: "Professional construction & renovation services that transform your vision into reality",
-    description: 'With over 20 years of experience in construction and renovation, we bring craftsmanship, reliability, and innovation to every project. Our team of skilled professionals is committed to reaching beyond your expectations.',
+    description: 'With over 40 years of experience in construction and renovation, we bring craftsmanship, reliability, and innovation to every project. Our team of skilled professionals is committed to reaching beyond your expectations.',
     ctaButtons: {
       primary: 'Get A Free Quote',
       secondary: 'View Our Work'
@@ -38,7 +38,7 @@ export const pages = {
     title: 'About Us',
     subtitle: 'Experienced professionals dedicated to transforming your home',
     description:
-      'With over 20 years of experience in home renovation, we bring craftsmanship, reliability, and innovation to every project. Our team of skilled professionals is committed to turning your vision into reality.',
+      'With over 40 years of experience in home renovation, we bring craftsmanship, reliability, and innovation to every project. Our team of skilled professionals is committed to turning your vision into reality.',
   },
   services: {
     title: 'Our Services',
@@ -65,23 +65,29 @@ export const pages = {
 } as const
 
 export const footer = {
-  copyright: '© 2024 Home Renovations. All rights reserved.',
+  copyright: '© 2025 Horizon Renovations LLC',
   tagline: 'Professional home improvement services',
+  licenseNumber: 'NC Licensed General Contractor #70467',
   socialLinks: [
     {
       platform: 'Facebook',
-      url: 'https://facebook.com/homerenovations',
+      url: 'https://www.facebook.com/horizonrenovationsllc',
       ariaLabel: 'Visit our Facebook page',
     },
     {
+      platform: 'YouTube',
+      url: 'https://www.youtube.com/channel/UCMm-CbCDgtGFzzip35KvA1Q',
+      ariaLabel: 'Watch our videos on YouTube',
+    },
+    {
       platform: 'Instagram',
-      url: 'https://instagram.com/homerenovations',
+      url: 'https://www.instagram.com/horizonrenovationsllc/',
       ariaLabel: 'Follow us on Instagram',
     },
     {
-      platform: 'LinkedIn',
-      url: 'https://linkedin.com/company/homerenovations',
-      ariaLabel: 'Connect with us on LinkedIn',
+      platform: 'Houzz',
+      url: 'https://www.houzz.com/professionals/general-contractors/horizon-renovations-pfvwus-pf~1863020700',
+      ariaLabel: 'See our work on Houzz',
     },
   ],
 } as const
@@ -152,8 +158,8 @@ export interface SocialLink {
 }
 
 export const aboutSection = {
-  title: "Serving Central North Carolina",
-  paragraph: "Horizon Renovations LLC is a Siler City, NC based remodeling and construction company proudly serving homeowners and commercial clients throughout Winston-Salem, Greensboro, High Point, Asheboro, Durham, Raleigh, and everywhere in between. We specialize in everything from whole house renovations and custom builds to kitchen and bathroom remodeling, plus unique services like custom cabinetry, deck building, and energy-efficient green building options.",
+  title: "North Carolina's Best Construction & Renovation Services",
+  paragraph: "We offer the highest quality workmanship & excellence in customer service! Horizon Renovations LLC is a Pittsboro, NC based new home construction, renovation and improvement company. We specialize in everything from custom design and build and whole house renovations to kitchen and bathroom remodeling. We also offer many other valuable services that other contractors do not, such as custom cabinetry for our customers and independent contractors.",
   image: "/images/about-horizon.jpg"
 } as const;
 
@@ -166,7 +172,7 @@ export const siteContent = {
 
   // Brief About
   about: {
-    title: "20+ Years of Trusted Craftsmanship",
+    title: "40+ Years of Trusted Craftsmanship",
     text: "Horizon Construction brings decades of experience to every project. From concept to completion, we deliver exceptional results that exceed expectations while staying on time and on budget."
   },
 
@@ -456,3 +462,72 @@ export const siteContent = {
     hours: "Monday - Friday: 8:00 AM - 6:00 PM"
   }
 } as const;
+
+export const aboutPage = {
+  hero: {
+    title: "About Horizon Renovations",
+    description: "Horizon Renovations LLC is a licensed, North Carolina general contractor business proud to specialize in the highest level of new home construction, residential and commercial renovations, and custom cabinetry."
+  },
+  mission: {
+    title: "Our Mission",
+    paragraphs: [
+      "The mission of Horizon Renovations LLC is to ensure complete satisfaction for our clients, both homeowner and building contractor, with quality service and products by offering the most positive experience in design and installation.",
+      "Our staff provides friendly, active, and personal service, and has an unmatched dedication to staying current on design trends and product innovations."
+    ],
+    image: "/images/about-mission.jpg",
+    imageAlt: "Horizon Renovations team at work"
+  },
+  leadership: {
+    title: "Meet the Owners",
+    paragraphs: [
+      "Horizon Renovations is led by owners and brothers, Kevin Frazier & Chris Frazier. They have over 40 years of experience in luxury residential remodeling and new construction in Chatham and Orange Counties.",
+      "In addition, they specialize in custom built cabinetry and have a custom cabinet shop in Chatham County."
+    ],
+    image: "/images/kevin-chris-frazier.jpg",
+    imageAlt: "Kevin and Chris Frazier, owners of Horizon Renovations"
+  },
+  showroom: {
+    title: "Visit Our Showroom",
+    description: "Our Showroom located in Downtown Pittsboro showcases fully functional custom built kitchens AND over 3,000 inventory items ranging from cabinets, countertops, tile, sinks, faucets, showers, knobs & pulls, HW floors, carpeting, lighting, A/V equipment, ceiling fans as well as intricate woodworking finishes with our moldings, arches and columns.",
+    features: [
+      'Custom Built Kitchens',
+      'Cabinets',
+      'Countertops', 
+      'Tile',
+      'Sinks & Faucets',
+      'Showers',
+      'Knobs & Pulls',
+      'Hardwood Floors',
+      'Carpeting',
+      'Lighting',
+      'A/V Equipment',
+      'Ceiling Fans',
+      'Moldings',
+      'Arches & Columns'
+    ],
+    address: {
+      street: "44 Hillsboro St Ste B",
+      city: "Pittsboro, NC 27312"
+    },
+    ctaButton: "Visit Our Showroom"
+  },
+  experience: {
+    title: "Our Experience",
+    stats: [
+      { number: "40+", label: "Years Combined Experience" },
+      { number: "3,000+", label: "Inventory Items" },
+      { number: "2", label: "Counties Served" }
+    ]
+  }
+} as const;
+
+export const newsletter = {
+  popup: {
+    title: "Subscribe to Our Newsletter",
+    subtitle: "Stay updated with our latest specials and promotions",
+    emailPlaceholder: "Enter your email address",
+    submitButton: "Subscribe Now",
+    closeButton: "No Thanks",
+    privacyText: "We respect your privacy. Unsubscribe at any time."
+  }
+} as const

@@ -5,13 +5,7 @@ export default function AwardsBanner() {
   return (
     <section className="bg-white py-12">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-8">
-          <h2 className="font-['Zodiak'] text-2xl md:text-3xl font-bold text-gray-900 mb-2">
-            {awards.title}
-          </h2>
-        </div>
-        
-        {/* Static Awards Grid */}
+        {/* Static Awards Grid - no title */}
         <div className="flex justify-center items-center gap-8 md:gap-12 lg:gap-16 flex-wrap">
           {awards.images.map((award, index) => (
             <div key={index} className="flex-shrink-0">
