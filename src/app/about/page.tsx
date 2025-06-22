@@ -63,13 +63,13 @@ export default function About() {
   return (
     <div className="min-h-screen">
       {/* Hero Section with Background Image */}
-      <section className="relative py-20 lg:py-32 min-h-[60vh] lg:min-h-[70vh] flex items-center">
+      <section className="relative py-10 lg:py-14 min-h-[35vh] lg:min-h-[40vh] flex items-center">
         <div className="absolute inset-0">
           <Image
-            src="/images/about-hero.jpg"
+            src="/images/about.jpg"
             alt="About Horizon Renovations"
             fill
-            className="object-cover"
+            className="object-cover object-bottom"
             priority
           />
           <div className="absolute inset-0 bg-black/40"></div>
@@ -84,13 +84,6 @@ export default function About() {
             }`}>
               {aboutPage.hero.title}
             </h1>
-            <p className={`text-xl md:text-2xl text-white/90 leading-relaxed transition-all duration-1000 ease-out delay-500 ${
-              heroLoaded 
-                ? 'opacity-100 translate-y-0' 
-                : 'opacity-0 translate-y-8'
-            }`}>
-              {aboutPage.hero.description}
-            </p>
           </div>
         </div>
       </section>

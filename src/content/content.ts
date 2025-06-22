@@ -24,44 +24,35 @@ export const navigation = {
 
 export const pages = {
   home: {
-    title: "Your Future Home,", 
-    titleSecond: "Built Right",
-    subtitle: "Professional construction & renovation services that transform your vision into reality",
-    description: 'With over 40 years of experience in construction and renovation, we bring craftsmanship, reliability, and innovation to every project. Our team of skilled professionals is committed to reaching beyond your expectations.',
-    ctaButtons: {
-      primary: 'Get A Free Quote',
-      secondary: 'View Our Work'
-    },
+    title: 'Welcome to Horizon Construction & Renovations',
+    subtitle: 'Quality craftsmanship for your dream home',
     heroImage: '/images/hero-home-renovation.jpg',
+    ctaButtons: {
+      primary: 'Get Free Quote',
+      secondary: 'Our Services'
+    }
   },
   about: {
     title: 'About Us',
-    subtitle: 'Experienced professionals dedicated to transforming your home',
-    description:
-      'With over 40 years of experience in home renovation, we bring craftsmanship, reliability, and innovation to every project. Our team of skilled professionals is committed to turning your vision into reality.',
+    subtitle: 'Learn about our story and expertise'
   },
   services: {
     title: 'Our Services',
-    subtitle: 'Comprehensive home renovation solutions tailored to your needs',
-    description:
-      'From kitchen remodeling to complete home additions, we offer a full range of renovation services with quality materials and expert craftsmanship.',
-  },
-  portfolio: {
-    title: 'Our Portfolio',
-    subtitle: 'See our completed projects and quality workmanship',
-    description:
-      'Browse through our collection of successfully completed renovation projects, showcasing our attention to detail and commitment to excellence.',
+    subtitle: 'Comprehensive home renovation solutions'
   },
   contact: {
     title: 'Contact Us',
-    subtitle: 'Ready to start your home renovation project?',
-    description:
-      "Get in touch with us today for a free consultation and estimate. We're here to help bring your renovation dreams to life.",
-    phone: '(555) 123-4567',
-    email: 'info@homerenovations.com',
-    address: '123 Renovation St, Your City, ST 12345',
-    businessHours: 'Monday - Friday: 8:00 AM - 6:00 PM',
+    description: 'Ready to start your next home renovation project? Call us today to discuss your vision and get a free estimate.',
+    phone: '(919) 542-4442',
+    email: 'info@horizonrenovationsllc.com',
+    address: '44 Hillsboro St Ste B, Pittsboro, NC 27312',
+    businessHours: 'Monday – Friday: 9:00 AM – 5:00 PM\nAfter Hours by Appointment Only',
+    licenseNumber: 'NC Licensed General Contractor #70467'
   },
+  portfolio: {
+    title: 'Our Portfolio',
+    subtitle: 'See our completed projects'
+  }
 } as const
 
 export const footer = {
@@ -465,8 +456,7 @@ export const siteContent = {
 
 export const aboutPage = {
   hero: {
-    title: "About Horizon Renovations",
-    description: "Horizon Renovations LLC is a licensed, North Carolina general contractor business proud to specialize in the highest level of new home construction, residential and commercial renovations, and custom cabinetry."
+    title: "About Us",
   },
   mission: {
     title: "Our Mission",
@@ -474,7 +464,7 @@ export const aboutPage = {
       "The mission of Horizon Renovations LLC is to ensure complete satisfaction for our clients, both homeowner and building contractor, with quality service and products by offering the most positive experience in design and installation.",
       "Our staff provides friendly, active, and personal service, and has an unmatched dedication to staying current on design trends and product innovations."
     ],
-    image: "/images/our-mission.webp",
+    image: "/images/about-hero.jpg",
     imageAlt: "Horizon Renovations team at work"
   },
   whyChooseUs: {
@@ -482,17 +472,17 @@ export const aboutPage = {
     reasons: [
       {
         title: "Experience & Trust",
-        icon: "shield", // For licensed/trusted
+        icon: "shield",
         description: "With over 40 years of combined experience, we are a NC Licensed General Contractor (#70467) with full liability and workers' compensation insurance. As a local, family-owned business serving Central North Carolina communities, we've built our reputation on integrity, reliability, and exceptional craftsmanship that you can trust."
       },
       {
         title: "Quality Craftsmanship",
-        icon: "hammer", // For craftsmanship
+        icon: "hammer",
         description: "Our skilled craftsmen are employees, not subcontractors, ensuring consistent quality and accountability on every project. We take pride in our attention to detail and use only quality materials. From design to completion, we maintain the highest standards of workmanship that exceed expectations."
       },
       {
         title: "Complete Solutions",
-        icon: "home", // For full-service
+        icon: "home",
         description: "We offer comprehensive design-build services under one roof, from custom homes and renovations to custom cabinetry. Our Downtown Pittsboro showroom features over 3,000 inventory items including cabinets, countertops, tile, fixtures, and more, making us your one-stop solution for all home improvement needs."
       }
     ]
