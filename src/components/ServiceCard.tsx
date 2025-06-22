@@ -23,14 +23,14 @@ export default function ServiceCard({
 
   return (
     <div
-      className="bg-white rounded-lg shadow-md overflow-hidden focus-within:ring-2 focus-within:ring-blue-500"
+      className="bg-cream rounded-lg shadow-lg overflow-hidden border-2 border-forest-green/10 hover:border-gold transition-all duration-300 focus-within:ring-2 focus-within:ring-forest-green"
       tabIndex={0}
       role="article"
       aria-label={`Service: ${title}`}
       onKeyDown={handleKeyDown}
     >
       {imageUrl && (
-        <div className="h-48 bg-gray-200 relative">
+        <div className="h-48 bg-forest-green/5 relative">
           <Image
             src={imageUrl}
             alt={title}
@@ -44,15 +44,15 @@ export default function ServiceCard({
         </div>
       )}
       <div className="p-6">
-        <h3 className="text-xl font-semibold mb-2">{title}</h3>
-        <p className="text-gray-600 mb-4">{description}</p>
+        <h3 className="text-xl font-bold text-forest-green mb-2">{title}</h3>
+        <p className="text-forest-green/80 mb-4">{description}</p>
         {features && features.length > 0 && (
           <div>
-            <h4 className="text-sm font-medium text-gray-800 mb-2">
+            <h4 className="text-sm font-bold text-gold mb-2">
               {serviceCard.featuresLabel}
             </h4>
             <ul
-              className="list-disc list-inside text-sm text-gray-500"
+              className="list-disc list-inside text-sm text-forest-green/70"
               role="list"
             >
               {features.map((feature, index) => (
