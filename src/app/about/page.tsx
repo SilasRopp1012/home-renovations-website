@@ -19,16 +19,12 @@ function useInView(threshold = 0.1) {
       },
       { threshold }
     )
-
+    
     if (ref.current) {
       observer.observe(ref.current)
     }
-
-    return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current)
-      }
-    }
+    
+    return () => observer.disconnect()
   }, [threshold])
 
   return [ref, isInView] as const
@@ -39,17 +35,7 @@ export default function About() {
   const [whyChooseUsRef, whyChooseUsInView] = useInView(0.2)
   const [showroomRef, showroomInView] = useInView(0.1)
   const [finalCtaRef, finalCtaInView] = useInView(0.2)
-  const [heroLoaded, setHeroLoaded] = useState(false)
   const [isModalOpen, setIsModalOpen] = useState(false)
-
-  // Trigger hero animations on mount
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setHeroLoaded(true)
-    }, 300)
-    
-    return () => clearTimeout(timer)
-  }, [])
 
   const handleQuoteClick = () => {
     setIsModalOpen(true)
@@ -61,32 +47,6 @@ export default function About() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section with Background Image */}
-      <section className="relative py-10 lg:py-14 min-h-[35vh] lg:min-h-[40vh] flex items-center">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/about.jpg"
-            alt="About Horizon Renovations"
-            fill
-            className="object-cover object-bottom"
-            priority
-          />
-          <div className="absolute inset-0 bg-black/40"></div>
-        </div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className={`font-['Zodiak'] text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 transition-all duration-1000 ease-out ${
-              heroLoaded 
-                ? 'opacity-100 translate-y-0' 
-                : 'opacity-0 translate-y-8'
-            }`}>
-              {aboutPage.hero.title}
-            </h1>
-          </div>
-        </div>
-      </section>
-
       {/* Introduction Section - New Combined Section */}
       <section className="py-16 lg:py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -99,9 +59,9 @@ export default function About() {
                   : 'opacity-0 -translate-x-12'
               }`}
             >
-              <h2 className="font-['Zodiak'] text-2xl md:text-3xl lg:text-4xl font-bold text-charcoal mb-6">
+              <h1 className="font-['Zodiak'] text-2xl md:text-3xl lg:text-4xl font-bold text-charcoal mb-6">
                 {aboutPage.introduction.title}
-              </h2>
+              </h1>
               <div className="space-y-6">
                 {aboutPage.introduction.paragraphs.map((paragraph, index) => (
                   <p key={index} className="text-gray-700 leading-relaxed">

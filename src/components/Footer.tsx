@@ -1,9 +1,13 @@
 'use client'
 
-import { footer, siteContent } from '@/content/content'
+import { footer, siteContent, pages } from '@/content/content'
+import { useState } from 'react'
 
 export default function Footer() {
   const { serviceAreas } = siteContent
+  const [newsletterEmail, setNewsletterEmail] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [showSuccess, setShowSuccess] = useState(false)
   
   // Social media icons
   const getSocialIcon = (platform: string) => {
@@ -37,15 +41,34 @@ export default function Footer() {
     }
   }
   
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!newsletterEmail) return
+
+    setIsSubmitting(true)
+    
+    // Add your newsletter signup logic here
+    console.log('Newsletter signup:', newsletterEmail)
+    
+    // Simulate API call
+    setTimeout(() => {
+      setIsSubmitting(false)
+      setNewsletterEmail('')
+      setShowSuccess(true)
+      // Hide success message after 3 seconds
+      setTimeout(() => setShowSuccess(false), 3000)
+    }, 1000)
+  }
+
   return (
     <footer className="bg-dark-brown-green text-cream py-12" role="contentinfo">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-6 gap-6">
           
-          {/* Connect with Us */}
+          {/* Connect with Us - Smaller */}
           <div>
-            <h3 className="text-lg font-bold mb-3 text-cream/90">Connect with Us</h3>
-            <div className="space-y-4 text-xs">
+            <h3 className="text-lg font-bold mb-3 text-cream/90">Contact</h3>
+            <div className="space-y-2 text-xs">
               {/* Phone Number */}
               <div>
                 <a href="tel:919-542-4442" className="text-cream/70 hover:text-cream/90 transition-colors cursor-pointer">
@@ -54,7 +77,7 @@ export default function Footer() {
               </div>
               
               {/* Social Media Icons */}
-              <div className="flex space-x-3">
+              <div className="flex space-x-2">
                 {footer.socialLinks.map((link) => (
                   <a
                     key={link.platform}
@@ -71,10 +94,42 @@ export default function Footer() {
             </div>
           </div>
           
-          {/* Service Areas - Updated to use simplified structure */}
+          {/* Newsletter Signup */}
+          <div>
+            <h3 className="text-lg font-bold mb-3 text-cream/90">Stay Updated</h3>
+            <p className="text-xs text-cream/70 mb-4">
+              Get our latest specials and renovation tips
+            </p>
+            
+            {showSuccess ? (
+              <div className="text-xs text-green-300 bg-green-900/20 p-2 rounded">
+                ✓ Thanks for subscribing!
+              </div>
+            ) : (
+              <form onSubmit={handleNewsletterSubmit} className="space-y-2">
+                <input
+                  type="email"
+                  value={newsletterEmail}
+                  onChange={(e) => setNewsletterEmail(e.target.value)}
+                  placeholder="Enter email address"
+                  required
+                  className="w-full px-2 py-1 text-xs bg-cream/10 border border-cream/20 rounded text-cream placeholder-cream/50 focus:outline-none focus:ring-1 focus:ring-cream/40"
+                />
+                <button
+                  type="submit"
+                  disabled={isSubmitting || !newsletterEmail}
+                  className="w-full px-2 py-1 text-xs bg-cream text-dark-brown-green rounded hover:bg-white transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+                >
+                  {isSubmitting ? 'Subscribing...' : 'Subscribe'}
+                </button>
+              </form>
+            )}
+          </div>
+          
+          {/* Service Areas - Larger (spans 2 columns) */}
           <div className="lg:col-span-2">
             <h3 className="text-lg font-bold mb-3 text-cream/90">Service Areas</h3>
-            <div className="grid grid-cols-2 gap-2 text-xs">
+            <div className="grid grid-cols-2 gap-1 text-xs">
               {serviceAreas.counties.map((countyName, index) => (
                 <div key={index} className="text-cream/70">
                   {countyName}
@@ -84,29 +139,44 @@ export default function Footer() {
           </div>
           
           {/* Showroom Location */}
-          <div className="lg:col-span-2">
-            <h3 className="text-lg font-bold mb-3 text-cream/90">Come Visit Our Showroom!</h3>
-            <div className="mb-3">
-              <p className="text-xs text-cream/70">44 Hillsboro St Ste B, Pittsboro, NC 27312</p>
+          <div>
+            <h3 className="text-lg font-bold mb-3 text-cream/90">Showroom</h3>
+            <div className="text-xs text-cream/70 space-y-1">
+              <div className="text-cream/80">Pittsboro, NC</div>
+              <div>Mon-Fri: 9AM-5PM</div>
+              <div>By Appointment Only</div>
             </div>
-            <div className="w-full h-40 rounded-lg overflow-hidden">
+          </div>
+          
+          {/* Interactive Map */}
+          <div>
+            <h3 className="text-lg font-bold mb-3 text-cream/90">Find Us</h3>
+            <div className="bg-cream/10 rounded-lg overflow-hidden border border-cream/20">
               <iframe
                 src="https://maps.google.com/maps?q=44+Hillsboro+St+Ste+B,Pittsboro,NC+27312&output=embed&z=16"
                 width="100%"
-                height="100%"
+                height="120"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Horizon Construction Showroom Location"
+                title="Horizon Renovations Showroom Location"
+                className="w-full"
               />
             </div>
           </div>
         </div>
         
-        <div className="border-t border-cream/20 mt-8 pt-4 text-center text-xs text-cream/50">
-          <p>{footer.copyright}</p>
-          <p className="mt-1">{footer.licenseNumber}</p>
+        {/* Footer Bottom */}
+        <div className="mt-12 pt-8 border-t border-cream/20 text-center">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-cream/60">
+            <div>
+              {footer.copyright} • {footer.tagline}
+            </div>
+            <div>
+              {footer.licenseNumber}
+            </div>
+          </div>
         </div>
       </div>
     </footer>

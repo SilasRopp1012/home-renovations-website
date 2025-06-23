@@ -154,19 +154,22 @@ function TiltCard({ children, className = "" }: { children: React.ReactNode; cla
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isNewsletterOpen, setIsNewsletterOpen] = useState(false);
-  const [hasShownNewsletter, setHasShownNewsletter] = useState(false);
 
-  // Newsletter popup timer - show on every page load, but only once per visit
+  // Newsletter popup timer - only for fresh browser sessions
   useEffect(() => {
-    if (!hasShownNewsletter) {
+    // Check if newsletter has been shown in this browser session
+    const hasShownInSession = sessionStorage.getItem('newsletterShown');
+    
+    if (!hasShownInSession) {
       const timer = setTimeout(() => {
         setIsNewsletterOpen(true)
-        setHasShownNewsletter(true)
+        // Mark as shown for this entire browser session
+        sessionStorage.setItem('newsletterShown', 'true')
       }, 2000) // Show after 2 seconds
 
       return () => clearTimeout(timer)
     }
-  }, [hasShownNewsletter])
+  }, []) // Empty dependency array - only runs once on mount
 
   // Services list for the homepage
   const featuredServices = [
@@ -209,8 +212,6 @@ export default function Home() {
             {/* Animated Title */}
             <h1 className="font-['Zodiak'] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-4 lg:mb-6 leading-tight animate-fade-in-up animation-delay-300 text-warm-white">
               {pages.home.title}
-              <br />
-              {pages.home.titleSecond}
             </h1>
             
             {/* Animated Subtitle - now white */}
@@ -381,7 +382,11 @@ export default function Home() {
       {/* Newsletter Popup */}
       <NewsletterPopup 
         isOpen={isNewsletterOpen} 
-        onClose={() => setIsNewsletterOpen(false)} 
+        onClose={() => {
+          setIsNewsletterOpen(false)
+          // Ensure it's marked as shown even if user closes it
+          sessionStorage.setItem('newsletterShown', 'true')
+        }} 
       />
     </>
   );

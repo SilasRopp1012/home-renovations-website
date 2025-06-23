@@ -4,22 +4,27 @@ import { useState } from 'react'
 import { siteContent } from '@/content/content'
 
 export default function Testimonials() {
-  const { testimonials } = siteContent
+  // Show only the first 5 testimonials on home page
+  const homeTestimonials = {
+    title: siteContent.testimonials.title,
+    reviews: siteContent.testimonials.reviews.slice(0, 5)
+  }
+  
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.reviews.length)
+    setCurrentIndex((prev) => (prev + 1) % homeTestimonials.reviews.length)
   }
 
   const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.reviews.length) % testimonials.reviews.length)
+    setCurrentIndex((prev) => (prev - 1 + homeTestimonials.reviews.length) % homeTestimonials.reviews.length)
   }
 
   const goToTestimonial = (index: number) => {
     setCurrentIndex(index)
   }
 
-  const currentReview = testimonials.reviews[currentIndex]
+  const currentReview = homeTestimonials.reviews[currentIndex]
 
   return (
     <section className="relative py-16 lg:py-24 overflow-hidden">
@@ -38,7 +43,7 @@ export default function Testimonials() {
       <div className="relative z-10 container mx-auto px-4">
         <div className="text-center mb-12 lg:mb-16">
           <h2 className="font-['Zodiak'] text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
-            {testimonials.title}
+            {homeTestimonials.title}
           </h2>
         </div>
         
@@ -90,7 +95,7 @@ export default function Testimonials() {
 
           {/* Dot indicators */}
           <div className="flex justify-center mt-8 space-x-2">
-            {testimonials.reviews.map((_, index) => (
+            {homeTestimonials.reviews.map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToTestimonial(index)}
@@ -107,7 +112,7 @@ export default function Testimonials() {
           {/* Counter */}
           <div className="text-center mt-4">
             <span className="text-sm text-white/80">
-              {currentIndex + 1} of {testimonials.reviews.length}
+              {currentIndex + 1} of {homeTestimonials.reviews.length}
             </span>
           </div>
         </div>

@@ -1,8 +1,13 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 import { navigation, images } from '@/content/content'
 
 export default function Header() {
+  const pathname = usePathname()
+
   return (
     <header className="sticky top-0 bg-white shadow-lg z-50">
       <nav
@@ -27,19 +32,27 @@ export default function Header() {
             <span className="sr-only">{navigation.brandName}</span>
           </Link>
           <ul className="flex space-x-6" role="menubar">
-            {navigation.links.map((link) => (
-              <li key={link.href} role="none">
-                <Link
-                  href={link.href}
-                  className="text-gray-900 hover:text-brown-green transition-colors focus:outline-none rounded px-2 py-1 font-medium"
-                  role="menuitem"
-                  aria-label={link.ariaLabel}
-                  tabIndex={0}
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
+            {navigation.links.map((link) => {
+              const isActive = pathname === link.href
+              
+              return (
+                <li key={link.href} role="none">
+                  <Link
+                    href={link.href}
+                    className={`transition-colors focus:outline-none rounded px-2 py-1 font-medium ${
+                      isActive 
+                        ? 'text-brown-green bg-brown-green/10' 
+                        : 'text-gray-900 hover:text-brown-green hover:bg-brown-green/5'
+                    }`}
+                    role="menuitem"
+                    aria-label={link.ariaLabel}
+                    tabIndex={0}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              )
+            })}
           </ul>
         </div>
       </nav>

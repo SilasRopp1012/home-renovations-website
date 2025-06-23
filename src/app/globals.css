@@ -206,9 +206,146 @@ body {
   .tilt-card:hover::after {
     opacity: 1;
   }
+
+  @keyframes pulse-once {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .animate-pulse-once {
+    animation: pulse-once 0.6s ease-in-out;
+  }
+
+  @keyframes pulse-continuous {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.15);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .animate-pulse-continuous {
+    animation: pulse-continuous 2s ease-in-out infinite;
+  }
 }
 
 /* Initial state for animated elements */
 .animate-fade-in-up {
   opacity: 0;
+}
+
+@keyframes circle-grow {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-circle-grow {
+  animation: circle-grow 0.8s ease-out;
+}
+
+@keyframes radar-ping {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  75% {
+    transform: scale(2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.animate-radar-ping {
+  animation: radar-ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes radar-ping-slow {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  75% {
+    transform: scale(2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.animate-radar-ping-slow {
+  animation: radar-ping-slow 4s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes radar-ping-hover {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+.animate-radar-ping-hover {
+  animation: radar-ping-hover 0.6s ease-out;
+}
+
+/* Keep the existing sequential animation for reference but we're not using it anymore */
+@keyframes radar-ping-sequential {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  25% {
+    transform: scale(2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.animate-radar-ping-sequential {
+  animation: radar-ping-sequential 8s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure smooth scrolling for anchor targets */
+* {
+  scroll-margin-top: 2rem;
 }

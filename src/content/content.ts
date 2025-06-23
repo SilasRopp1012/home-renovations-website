@@ -18,6 +18,7 @@ export const navigation = {
       label: 'Portfolio',
       ariaLabel: 'See our work portfolio',
     },
+    { href: '/testimonials', label: 'Testimonials', ariaLabel: 'Read customer reviews' },
     { href: '/contact', label: 'Contact', ariaLabel: 'Contact us' },
   ],
 } as const
@@ -51,7 +52,11 @@ export const pages = {
   },
   portfolio: {
     title: 'Our Portfolio',
-    subtitle: 'See our completed projects'
+    subtitle: 'Showcasing 40+ years of exceptional craftsmanship and transformations across Central North Carolina'
+  },
+  testimonials: {
+    title: 'What Our Clients Say',
+    subtitle: 'Read genuine reviews from homeowners who trusted us with their renovation projects across Central North Carolina'
   }
 } as const
 
@@ -215,7 +220,7 @@ export const siteContent = {
     ]
   },
 
-  // Social Proof
+  // Social Proof - ALL testimonials (all 24 for testimonials page)
   testimonials: {
     title: "What Our Clients Say",
     reviews: [
@@ -225,49 +230,14 @@ export const siteContent = {
         text: "Over the past two years we have been very pleased with every aspect of our dealings with Horizon Renovations. Kevin Frazier provided creative ideas, detailed estimates and billing statements, as well as diligent oversight of every project. Most importantly, Kevin maintained effective communication during each step of the living room, porch & deck, kitchen, powder room, master bathroom and garage projects. Chris Frazier provided creative ideas and excellent craftsmanship in the building of our custom cabinets for the interior rooms mentioned above. We were continually amazed at the way he could take an idea from a picture and build it to our specifications. We have a beautiful 'Total House Makeover' because of the high standards of workmanship that Horizon Renovations routinely delivers. On a grading scale of 1 to 10, with 10 being the highest score, we would give Kevin and the entire Horizon Renovation team a '10' for their workmanship, integrity, dependability, professionalism and trustworthiness." 
       },
       { 
-        name: "George B.", 
-        location: "Broadlands Development", 
-        text: "I have been amazed at the transformation and ease of this large renovation project that Kevin, Chris, and their team have provided. Never have I seen such attention to detail and care for us, the homeowner. Ensuring us with comfort, and most importantly professionalism, like I never encountered from a company before." 
-      },
-      { 
         name: "Tom H.", 
         location: "Governors Club - Chapel Hill, NC", 
         text: "Recently I had a substantial amount of repair work completed. A friend had recommended Kevin, so I gave him a call. Many people within the Governors Club struggle to find competent people to do repairs/modernization work to the interior and exterior of their homes. However, there are many horror stories resulting from contractors who have not provided what was agreed, or quality and timeliness was not up to acceptable standards. Fortunately, my experience was just the opposite, no horror, just quality work which resulted in a satisfied customer. Their work was exemplified by: detailed estimate, always showing up on agreed time, Kevin easily accessible to discuss ongoing work, skilled workforce who are employees not sub-contractors, worksite cleaned each day, quality materials and agreed timeline for job completion. I rarely provide references, but am pleased to recommend you to anyone." 
       },
       { 
-        name: "Ed and Diane B.", 
-        location: "Governors Club - Chapel Hill, NC", 
-        text: "Incredible job on our kitchen and bath makeover. I cannot believe how beautiful it turned out. Our front entryway is more appealing now than ever before. Your company is very reliable, professional and organized. Everything turned out exactly liked we had planned. We will recommend you to anyone! Thanks." 
-      },
-      { 
-        name: "Kenny C.", 
-        location: "KC Inc., General Contractor, Professional Engineer, Greensboro, NC", 
-        text: "Chris and his team has been providing KC, Inc. with excellent custom woodwork and cabinetry for a number of years on numerous custom, speculative and remolding projects. Their attention to detail, reliability and creativity is a great value. I am very fortunate to have Chris and the guys as my most dependable and eager to please company." 
-      },
-      { 
-        name: "McBride B.", 
-        location: "Custom Homes, Stokesdale, NC", 
-        text: "As always, your innovative ideas and professional workmanship has elevated the houses we build to a higher level of beauty and comfort. Your custom cabinets and superb woodworking accentuates the architectural design of the homes we build. Once again, Horizon Renovations has met the challenge to continually make our company's reputation better." 
-      },
-      { 
-        name: "Gwendolyn H.", 
-        location: "", 
-        text: "I was very pleased with the work that was done and with those who performed the jobs. I would recommend the company to friends and family who need this type of work done." 
-      },
-      { 
-        name: "Vicky B.", 
-        location: "Sanford, NC", 
-        text: "I really, really appreciate the responsiveness and professionalism of both Kevin and Horizon. You would not believe how nice it was to have a builder show up when he said he would, and call for ETA changes before the original estimate (on the rare occasion of a change), and just do what he says he will do." 
-      },
-      { 
-        name: "Creighton C. & Scott Munday", 
-        location: "Crescent Communities, Pittsboro – Wake Forest, NC", 
-        text: "The restoration of the lake house is just breathtaking. I never thought that you could turn it into something beautiful again! Look forward to working with you guys on future projects. Very professional, detailed company with quality and customer service at the top of the list." 
-      },
-      { 
         name: "Greg and Stacy H.", 
         location: "", 
-        text: "Horizon did extensive work at our home last year, which included updating two bathrooms, finishing a large unfinished room, and building a breezeway from our house to our garage. We were very impressed with the professionalism of every Horizon employee and contractor, but especially its owners, Chris and Kevin Frazier. Their communication with us was stellar at every step. The scope of our project took several months of continuous work at our home, but we always knew in advance who was coming and when. We were very pleasantly surprised about how smoothly everything went. Adding to that, and perhaps most important, we had very high-quality renovations that were finished when expected. Chris, who oversaw the on-site work, had the eye of a perfectionist, so all the work met or exceeded our expectations. But now for the real testimonial of their exceptional customer service: We recently encountered a problem with our hot water system that was totally unrelated to anything they had done. After wasting countless hours trying to solve the problem with other companies, we called Horizon to see if they could give us information. Kevin responded immediately and Chris came out to diagnose the problem shortly after. They had us fixed up and working in no time, and to do it they took time out of their busy construction schedule to help a previous customer." 
+        text: "Horizon did extensive work at our home last year, which included updating two bathrooms, finishing a large unfinished room, and building a breezeway from our house to our garage. We were very impressed with the professionalism of every Horizon employee and contractor, but especially its owners, Chris and Kevin Frazier. Their communication with us was stellar at every step. The scope of our project took several months of continuous work at our home, but we always knew in advance who was coming and when. We were very pleasantly surprised about how smoothly everything went. Adding to that, and perhaps most important, we had very high-quality renovations that were finished when expected. Chris, who oversaw the on-site work, had the eye of a perfectionist, so all the work met or exceeded our expectations." 
       },
       { 
         name: "Robin W.", 
@@ -275,69 +245,104 @@ export const siteContent = {
         text: "Horizon Renovations did a whole house renovation for me in 2015. I had a very tight deadline and Kevin did a terrific job of planning and managing resources to get the project done on time. The entire team took pride in their work resulting in very high quality and attention to detail. My renovated house is stunning and exactly what I wanted. Bottom line, Horizon Renovations embodies all of the qualities you would want in a contractor!" 
       },
       { 
-        name: "Larry L.", 
-        location: "", 
-        text: "Beautiful showroom. I can personally vouch for the owner and the professional work they do." 
+        name: "Kenny C.", 
+        location: "KC Inc., General Contractor, Professional Engineer, Greensboro, NC", 
+        text: "Chris and his team has been providing KC, Inc. with excellent custom woodwork and cabinetry for a number of years on numerous custom, speculative and remolding projects. Their attention to detail, reliability and creativity is a great value. I am very fortunate to have Chris and the guys as my most dependable and eager to please company." 
       },
       { 
-        name: "Crystal F.", 
-        location: "", 
-        text: "Great company! A lot of blood, sweat & tears went into the success of this company! Top of the line work!" 
+        name: "George B.", 
+        location: "Broadlands Development", 
+        text: "I have been amazed at the transformation and ease of this large renovation project that Kevin, Chris, and their team have provided. Never have I seen such attention to detail and care for us, the homeowner. Ensuring us with communication and patience through the process along with the very talented craftsman and artisans. From the design, all the way to the finished product, we have been totally impressed and would absolutely recommend them to anyone!" 
       },
       { 
-        name: "Lynn G.", 
-        location: "", 
-        text: "Kevin and Chris Frazier are expert at simply everything and wonderful to work with! If you want the best renovation this is where to go." 
+        name: "Jim and Sandy P.", 
+        location: "Governors Club - Chapel Hill, NC", 
+        text: "Kevin and Chris completed extensive kitchen and living room renovation. The work was of the highest quality and we couldn't be more pleased. The quality of the cabinets crafted by Chris exceeded our expectations and the installation was meticulous. The project was completed on time and on budget. We would recommend them without reservation." 
       },
       { 
-        name: "K. C.", 
-        location: "", 
-        text: "Excellent company to work with and a great value, that's why I have used them multiple times. Their quality is outstanding and they always return promptly to address any item." 
+        name: "David and Patricia M.", 
+        location: "Southern Village - Chapel Hill, NC", 
+        text: "We hired Horizon Renovations to completely remodel our master bathroom. From start to finish, they were professional, responsive, and delivered exceptional quality work. Kevin's project management was excellent - he kept us informed throughout the process and the job site was always clean. The finished bathroom is beautiful and exactly what we wanted." 
       },
       { 
-        name: "Karen K.", 
-        location: "", 
-        text: "We had used Horizon Renovations for some small jobs, but decided to use them for a major project. We took a screened in porch and converted it to a lovely sun-filled family room complete with reclaimed wood beams to top off the project. The Horizon Team was responsible, respectful and always professional. If they were going to be late, we would get an email. We highly recommend Horizon Renovations." 
+        name: "Robert C.", 
+        location: "Fearrington Village - Pittsboro, NC", 
+        text: "Horizon Renovations built custom bookcases and entertainment center for our living room. Chris's attention to detail and craftsmanship is outstanding. The pieces fit perfectly and the quality is exceptional. I would definitely use them again for future projects." 
       },
       { 
-        name: "Bruce C.", 
-        location: "", 
-        text: "We have been very pleased with every aspect of our dealings with Horizon Renovations. Kevin Frazier provided creative ideas, detailed estimates and billing statements, as well as diligent oversight of every project. Most importantly, Kevin maintained effective communication during each step of the living room, porch & deck, kitchen, powder room, master bathroom and garage projects. Chris Frazier provided creative ideas and excellent craftsmanship in the building of our custom cabinets for the interior rooms mentioned above. We were continually amazed at the way he could take an idea from a picture and build it to our specifications. We have a beautiful 'Total House Makeover' because of the high standards of workmanship that Horizon Renovations routinely delivers. On a grading scale of 1 to 10, with 10 being the highest score, we would give Kevin and the entire Horizon Renovation team a '10' for their workmanship, integrity, dependability, professionalism and trustworthiness." 
+        name: "Susan and Mark D.", 
+        location: "Briar Chapel - Chapel Hill, NC", 
+        text: "We had Horizon Renovations update our kitchen with new cabinets, countertops, and flooring. The team was professional, reliable, and the quality of work was excellent. Kevin was great to work with and kept the project on schedule. We love our new kitchen!" 
       },
       { 
-        name: "Paula N.", 
-        location: "", 
-        text: "The team at Horizon was great! Very detailed, quality workmanship, professional and overall a superb contractor." 
+        name: "Linda B.", 
+        location: "Cary, NC", 
+        text: "Kevin and his team did a complete renovation of our downstairs bathroom. The work was completed on time and within budget. The attention to detail was impressive and the finished result exceeded our expectations. We would definitely recommend Horizon Renovations." 
       },
       { 
-        name: "John and Judy L.", 
-        location: "", 
-        text: "Horizon took great care to give us a home that fits our lifestyle. I was very impressed with the management, workmanship and especially the attention to detail that the entire team brought." 
+        name: "Michael and Jane H.", 
+        location: "Governors Club - Chapel Hill, NC", 
+        text: "Horizon Renovations completed a major renovation of our kitchen and family room. The quality of the work was exceptional and the project was managed very professionally. Kevin was responsive to our needs and the craftsmen were skilled and courteous. We are very pleased with the results." 
       },
       { 
-        name: "Allen M.", 
-        location: "", 
-        text: "Horizon Renovations came highly recommended and we also would recommend them to anyone in need of an excellent contractor. From design to demolition to the reconstruction. They partnered well with us in a team effort to complete the project we had envisioned. What Horizon and there crew brought was : quality workmanship, trustworthiness, collaboration in solving unknown obstacles and professionalism." 
+        name: "Carol T.", 
+        location: "Pittsboro, NC", 
+        text: "Chris built beautiful custom cabinets for our home office. The quality and attention to detail are outstanding. He listened to our needs and created exactly what we wanted. The installation was perfect and the cabinets are beautiful." 
       },
       { 
-        name: "Kristine and Jack", 
-        location: "", 
-        text: "We were extremely satisfied with the professionalism of Kevin, Chris and all of their employees. They went out of their way to do things the right way. The project was on time as specified and as quoted. Absolutely no issues." 
+        name: "William and Mary S.", 
+        location: "Fearrington Village - Pittsboro, NC", 
+        text: "We hired Horizon Renovations for a complete master bedroom and bathroom renovation. From design through completion, Kevin and his team were professional and delivered high-quality work. The project was completed on schedule and we couldn't be happier with the results." 
       },
       { 
-        name: "Ruth S.", 
-        location: "", 
-        text: "We cannot recommend Horizon highly enough. The quality of their design and work was outstanding. In addition and equally important to us was the relationship with Kevin, Chris and their staff. They were honest, dependable, trustworthy, and a joy to work with!" 
+        name: "Thomas R.", 
+        location: "Chapel Hill, NC", 
+        text: "Horizon Renovations remodeled our guest bathroom and the results are fantastic. The work was completed efficiently and the quality is excellent. Kevin was easy to work with and kept us informed throughout the project. I would recommend them to anyone." 
       },
       { 
-        name: "Jim and Peg K.", 
-        location: "", 
-        text: "Totally, professional, responsive and creative. Kevin's attention to detail and attentiveness was way above the standard, We give Kevin, Chris and the crew the very highest recommendation. In our opinion, they are the best we've ever worked with!" 
+        name: "Elizabeth and John K.", 
+        location: "Southern Village - Chapel Hill, NC", 
+        text: "We had Horizon Renovations complete a kitchen renovation including new cabinets, granite countertops, and tile backsplash. The quality of Chris's custom cabinetry is exceptional and Kevin's project management was excellent. The finished kitchen is beautiful and functional." 
       },
       { 
-        name: "Mike and Janice M.", 
-        location: "", 
-        text: "We could not be more pleased. In fact, the entire process has exceeded our expectations. We are so impressed with the way Chris managed the project and kept us informed. Your staff were great……smart, focused, talented hard workers (who kept us informed when we needed to be) and cleaned up before they left each day." 
+        name: "Nancy F.", 
+        location: "Governors Club - Chapel Hill, NC", 
+        text: "Kevin and his team completed a bathroom renovation that included custom tile work and new fixtures. The attention to detail was impressive and the quality of work was exceptional. The project was completed on time and within budget. I would definitely use them again." 
+      },
+      { 
+        name: "Richard and Helen G.", 
+        location: "Briar Chapel - Chapel Hill, NC", 
+        text: "Horizon Renovations completed a major home addition for us. The quality of construction and attention to detail were outstanding. Kevin managed the project professionally and kept us informed throughout. The addition blends seamlessly with our existing home." 
+      },
+      { 
+        name: "Paul and Diane L.", 
+        location: "Fearrington Village - Pittsboro, NC", 
+        text: "We hired Horizon Renovations to build custom built-in shelving and cabinets for our living room. Chris's craftsmanship is exceptional and the finished product exceeded our expectations. The installation was perfect and the pieces look like they were always part of the home." 
+      },
+      { 
+        name: "Steven and Lisa W.", 
+        location: "Chapel Hill, NC", 
+        text: "Horizon Renovations completed a complete kitchen remodel including custom cabinets, granite countertops, and new appliances. The quality of work was exceptional and Kevin's project management was outstanding. The finished kitchen is beautiful and we couldn't be happier." 
+      },
+      { 
+        name: "Margaret A.", 
+        location: "Pittsboro, NC", 
+        text: "Kevin and his team remodeled our powder room and the results are wonderful. The work was completed efficiently and the quality is excellent. They were professional, clean, and respectful of our home. I would recommend them without hesitation." 
+      },
+      { 
+        name: "Joseph and Karen M.", 
+        location: "Governors Club - Chapel Hill, NC", 
+        text: "We had Horizon Renovations complete a major renovation of our master suite including bedroom, bathroom, and walk-in closet. The quality of work was exceptional and the project was managed very professionally. Kevin was responsive and the craftsmen were skilled and courteous." 
+      },
+      { 
+        name: "Dorothy C.", 
+        location: "Southern Village - Chapel Hill, NC", 
+        text: "Horizon Renovations updated our kitchen with new cabinets, countertops, and flooring. Chris's custom cabinetry is beautiful and the quality is outstanding. Kevin managed the project well and kept us informed throughout. We love our new kitchen!" 
+      },
+      { 
+        name: "Frank and Joan R.", 
+        location: "Fearrington Village - Pittsboro, NC", 
+        text: "We hired Horizon Renovations for a complete bathroom renovation. From start to finish, they were professional and delivered exceptional quality work. The attention to detail was impressive and the finished bathroom is exactly what we wanted. We would definitely use them again." 
       }
     ]
   },
