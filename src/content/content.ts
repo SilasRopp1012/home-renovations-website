@@ -24,8 +24,8 @@ export const navigation = {
 
 export const pages = {
   home: {
-    title: 'Welcome to Horizon Construction & Renovations',
-    subtitle: 'Quality craftsmanship for your dream home',
+    title: '40+ Years of Trusted Craftsmanship',
+    subtitle: 'Transforming North Carolina homes with quality and excellence',
     heroImage: '/images/hero-home-renovation.jpg',
     ctaButtons: {
       primary: 'Get Free Quote',
@@ -200,119 +200,18 @@ export const siteContent = {
     ]
   },
 
-  // Service Areas
+  // Service Areas - simplified
   serviceAreas: {
-    title: "Service Areas Throughout Central North Carolina",
-    subtitle: "Residential & Commercial Renovation, Remodeling and Improvement Services",
     counties: [
-      {
-        name: "Forsyth County",
-        mainCities: ["Winston-Salem", "Clemmons", "Kernersville", "Lewisville"],
-        zipCodes: "27101-27199",
-        allAreas: [
-          "Alspaugh", "Arcadia", "Ardmore", "Atwood", "Bannertown", "Belews Creek", 
-          "Bethania", "Bethania Station", "Bon Air", "Brookwood", "Buena Vista", 
-          "Burke Park", "Capernium", "Cityview", "Clemmons", "Clemmons Station",
-          "Columbia Heights", "Crims Crossroads", "Dennis", "Donnaha", "Dozier",
-          "East Winston", "Easton View", "Five Points", "Forest Hills", "Frontis",
-          "Grapewood", "Guthrie", "Hanes", "Harmony Grove", "Hootstown", "Horneytown",
-          "Jonestown", "Kernersville", "Lewisville", "Montview", "Mount Tabor",
-          "Muddy Creek", "North Winston", "Oak Crest", "Ogburn Station", "Oldtown",
-          "Park Terrace", "Pfafftown", "Reynolda", "Reynolda Park", "Rosemont",
-          "Rural Hall", "Salem", "Sedge Garden", "Seward", "South Fork", "South Side",
-          "Stanleyville", "Sunnyside", "Swaimtown", "Talleys Crossing", "Teaguetown",
-          "Tobaccoville", "Union Cross", "Union Ridge", "Valley View", "Vienna",
-          "Walkertown", "Waughtown", "West Bend", "West Highlands", "West Oaks",
-          "West Salem", "Westview", "Winston-Salem"
-        ]
-      },
-      {
-        name: "Wake County", 
-        mainCities: ["Raleigh", "Cary", "Apex", "Garner", "Holly Springs", "Morrisville", "Wake Forest"],
-        zipCodes: "27601-27699",
-        allAreas: [
-          "Apex", "Asbury", "Auburn", "Banks", "Barham", "Bayleaf", "Bonsal",
-          "Caraleigh", "Carolina Pines", "Carpenter", "Cary", "Clegg", "Cloverdale",
-          "Colonial Heights", "Eagle Rock", "East Parkland", "Echo Heights",
-          "Emerald Village", "Fairway Acres", "Falls", "Feltonville", "Five Points",
-          "Forest Hills", "Forestville", "Fowlers Crossroads", "Friendship",
-          "Fuquay-Varina", "Garner", "Glen Forest", "Glenwood Village", "Green Acres",
-          "Green Level", "Greenbrier Estates", "Hertford Village", "Holland",
-          "Hollemans Crossroads", "Holly Springs", "Home Acres", "Hopkins", "Juniper",
-          "Kennebec", "Knightdale", "Lassiter", "Leesville", "Lizard Lick", "Macedonia",
-          "Macks Village", "McCullers", "McCullers Crossroads", "Medfield", "Method",
-          "Milburnie", "Millbrook", "Morrisville", "Mount Pleasant", "Neuse",
-          "Neuse Crossroads", "New Hill", "New Hope", "New Light", "Parkland",
-          "Pet Crossroads", "Pine Hurst Park", "Piney Plains", "Purnell", "Raleigh",
-          "Rangewood", "Rhamkatte", "Riley Hill", "Rolesville", "Sandy Plain",
-          "Shotwell", "Six Forks", "Six Forks Crossroads", "Stony Hill",
-          "Twin Lakes Estates", "Tysonville", "Upchurch", "Wake Crossroads",
-          "Wake Forest", "Walkers Crossroads", "Wendell", "West Parkland", "Westover",
-          "Wilbon", "Wilders Grove", "Williams Crossroads", "Zebulon"
-        ]
-      },
-      {
-        name: "Guilford County",
-        mainCities: ["Greensboro", "High Point", "Jamestown", "Summerfield"],
-        zipCodes: "27260-27265", 
-        allAreas: [
-          "Allen Jay", "Bakertown", "Bessemer", "Brightwood", "Broadview",
-          "Browns Summit", "Climax", "Colfax", "Deep River", "East White Oak",
-          "Edgeville", "Fairfield", "Fisher Park", "Florence", "Forest Oaks",
-          "Freeman Mill", "Friendship", "Gibsonville", "Glenwood", "Greensboro",
-          "Greesons Crossroads", "Groometown", "Guilford", "Guilford College",
-          "Hamilton Lakes", "High Point", "Highland Park West", "Hillsdale", "Hilltop",
-          "Irving Park", "Jamestown", "Julian", "Kings Crossroads", "Kirkman Crossroad",
-          "Kirkwood", "Koontzville", "Lake Daniel", "Lakewood", "Latham Park",
-          "Latham Town", "Lindley Park", "McAdoo Heights", "McLeansville",
-          "Melborne Heights", "Miles Crossroad", "Monticello", "Mount Zion", "Nocho Park",
-          "North Hyde Park", "Oak Grove", "Oak Ridge", "Oakdale", "Oakview", "Oakwood",
-          "Ogburns Crossroads", "Osceola", "Piedmont Heights", "Pinecroft",
-          "Pleasant Garden", "Pomona", "Proximity", "Rankin", "Revolution", "Rocky Knoll",
-          "Rudd", "Sandy Ridge", "Scalesville", "Scott Park", "Sedalia", "Sedgefield",
-          "Sedge-Town", "Sherwood Village", "Springfield", "Starmount Forest",
-          "Stewarts Mill", "Stokesdale", "Summerfield", "Sunset Hills", "Terra Cotta",
-          "Troxlers Mill", "Vandalia", "Westerwood", "White Oak", "Whitsett"
-        ]
-      },
-      {
-        name: "Durham County",
-        mainCities: ["Durham", "Chapel Hill"],
-        zipCodes: "27701-27722",
-        allAreas: [
-          "Bahama", "Bethesda", "Bilboa", "Blands", "Braggtown", "Brassfield",
-          "Burton", "Durham", "Fairntosh", "Few", "Fox Run", "Genlee", "Gorman",
-          "Hayes", "Huckleberry Spring", "Joyland", "Keene", "Lowes Grove",
-          "Lynn Crossroads", "Nelson", "Oak Grove", "Orange Factory", "Quail Roost",
-          "Redwood", "Rocky Knoll", "Rougemont", "Weaver", "Willardville"
-        ]
-      },
-      {
-        name: "Davidson County", 
-        mainCities: ["Lexington", "Thomasville"],
-        zipCodes: "27292-27361",
-        allAreas: [
-          "Arcadia", "Arnold", "Bethesda", "Cedar Grove", "Churchland", "Cid",
-          "Cotton Grove", "Currytown", "Denton", "Enterprise", "Erlanger",
-          "Erwin Heights", "Fair Grove", "Feezor", "Georgetown", "Glen Anna",
-          "Gordontown", "Gum Tree", "Handy", "Healing Springs", "Hedrick Grove",
-          "High Rock", "Holly Grove", "Jackson Hill", "Jakesville", "Johnsontown",
-          "Jubilee", "Lakeview", "Lexington", "Linwood", "Meadowview", "Midway",
-          "Newsom", "Petersville", "Pilot", "Reeds Crossroads", "Reedy Creek",
-          "Sandy Grove", "Silver Hill", "Silver Valley", "Southmont", "Thomasville",
-          "Tyro", "Wallburg", "Walser", "Welcome"
-        ]
-      },
-      {
-        name: "Additional Counties",
-        mainCities: ["Asheboro", "Burlington", "Siler City", "Pittsboro"],
-        areas: [
-          "Randolph County: Asheboro, Archdale, Franklinville, Liberty, Ramseur, Randleman, Seagrove, Trinity",
-          "Alamance County: Burlington, Graham, Elon, Haw River, Mebane, Snow Camp",
-          "Chatham County: Siler City, Pittsboro, Bear Creek, Bennett, Goldston, Moncure",
-          "Orange County: Chapel Hill, Carrboro, Hillsborough, Efland"
-        ]
-      }
+      "Forsyth County",
+      "Wake County", 
+      "Guilford County",
+      "Durham County",
+      "Davidson County",
+      "Randolph County",
+      "Alamance County", 
+      "Chatham County",
+      "Orange County"
     ]
   },
 
@@ -458,14 +357,14 @@ export const aboutPage = {
   hero: {
     title: "About Us",
   },
-  mission: {
-    title: "Our Mission",
+  introduction: {
+    title: "Who We Are",
     paragraphs: [
-      "The mission of Horizon Renovations LLC is to ensure complete satisfaction for our clients, both homeowner and building contractor, with quality service and products by offering the most positive experience in design and installation.",
-      "Our staff provides friendly, active, and personal service, and has an unmatched dedication to staying current on design trends and product innovations."
+      "Horizon Renovations is led by owners and brothers, Kevin Frazier & Chris Frazier. We have over 40 years of experience in luxury residential remodeling and new construction in the Central North Carolina area. Our mission is to ensure complete satisfaction for our clients, both homeowner and building contractor, with quality service and products by offering the most positive experience in design and installation.",
+      "Our staff provides friendly, active, and personal service, and has an unmatched dedication to staying current on design trends and product innovations. In addition, we specialize in custom built cabinetry and have a showroom in Pittsboro, NC."
     ],
-    image: "/images/about-hero.jpg",
-    imageAlt: "Horizon Renovations team at work"
+    image: "/images/team.jpg",
+    imageAlt: "Kevin and Chris Frazier with the Horizon Renovations team"
   },
   whyChooseUs: {
     title: "Why Choose Horizon Renovations?",
@@ -486,15 +385,6 @@ export const aboutPage = {
         description: "We offer comprehensive design-build services under one roof, from custom homes and renovations to custom cabinetry. Our Downtown Pittsboro showroom features over 3,000 inventory items including cabinets, countertops, tile, fixtures, and more, making us your one-stop solution for all home improvement needs."
       }
     ]
-  },
-  leadership: {
-    title: "Meet the Owners",
-    paragraphs: [
-      "Horizon Renovations is led by owners and brothers, Kevin Frazier & Chris Frazier. We have over 40 years of experience in luxury residential remodeling and new construction in the Central North Carolina area.",
-      "In addition, we specialize in custom built cabinetry and have a showroom in Pittsboro, NC."
-    ],
-    image: "/images/team.jpg",
-    imageAlt: "Kevin and Chris Frazier with the Horizon Renovations team"
   },
   showroom: {
     title: "Visit Our Showroom",
@@ -535,3 +425,89 @@ export const newsletter = {
     privacyText: "We respect your privacy. Unsubscribe at any time."
   }
 } as const
+
+export const servicesPage = {
+  hero: {
+    title: "Expert Home Renovations",
+    subtitle: "From kitchen remodels to whole house renovations, we bring 40+ years of craftsmanship to every project",
+    backgroundImage: "/images/services-hero.jpg"
+  },
+  mainServices: [
+    {
+      id: "kitchen-remodeling",
+      title: "Kitchen Remodeling",
+      description: "Transform your kitchen into the heart of your home with custom designs, quality materials, and expert craftsmanship that combines beauty with functionality.",
+      features: [
+        "Custom cabinet design & installation",
+        "Countertop selection & installation", 
+        "Modern appliance integration",
+        "Professional lighting design",
+        "Flooring & backsplash installation"
+      ],
+      image: "/images/services/kitchen.jpg",
+      alt: "Beautiful custom kitchen renovation with white cabinets and modern appliances"
+    },
+    {
+      id: "bathroom-renovation", 
+      title: "Bathroom Renovation",
+      description: "Create your personal spa retreat with luxurious bathroom renovations that maximize space while delivering stunning results and long-lasting quality.",
+      features: [
+        "Custom tile work & installations",
+        "Vanity & sink upgrades",
+        "Walk-in showers & soaking tubs",
+        "Modern fixtures & hardware",
+        "Efficient lighting solutions"
+      ],
+      image: "/images/services/bathroom-renovation.jpg",
+      alt: "Elegant bathroom renovation with modern fixtures and custom tile work"
+    },
+    {
+      id: "home-additions",
+      title: "Home Additions",
+      description: "Expand your living space seamlessly with professionally designed and built additions that match your home's existing architecture and style.",
+      features: [
+        "Room additions & expansions",
+        "Second story additions",
+        "Sunroom installations", 
+        "Garage conversions",
+        "Basement finishing"
+      ],
+      image: "/images/services/home-addition-gallery.jpg",
+      alt: "Beautiful home addition that seamlessly blends with existing architecture"
+    },
+    {
+      id: "custom-cabinetry",
+      title: "Custom Cabinetry",
+      description: "Handcrafted custom cabinets built to your exact specifications, offering superior quality and unique designs that perfectly fit your space and style.",
+      features: [
+        "Completely custom designs",
+        "Premium hardwood construction",
+        "Soft-close hardware included",
+        "Professional installation",
+        "Built-in storage solutions"
+      ],
+      image: "/images/services/cabinetry.jpg", 
+      alt: "Custom built-in cabinetry with beautiful wood finishes and modern hardware"
+    },
+    {
+      id: "new-home-construction", 
+      title: "New Home Construction",
+      description: "Build your dream home from the ground up with our comprehensive construction services, bringing your vision to life with quality craftsmanship.",
+      features: [
+        "Custom home design",
+        "Site preparation & foundation",
+        "Framing & structural work",
+        "Complete interior finishing",
+        "Landscaping coordination"
+      ],
+      image: "/images/services/newhome.webp",
+      alt: "New custom home construction showing quality craftsmanship and attention to detail"
+    }
+  ],
+  cta: {
+    title: "Ready to Start Your Project?",
+    subtitle: "Get a free consultation and detailed estimate for your home renovation",
+    primaryButton: "Get Free Quote",
+    secondaryButton: "Call (919) 542-4442"
+  }
+} as const;

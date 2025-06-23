@@ -17,29 +17,45 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="bg-specials-bg py-16 lg:py-20">
+      {/* Ready to Start Your Project - Moved to top */}
+      <section className="py-16 lg:py-20 bg-specials-bg">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="font-['Zodiak'] text-3xl md:text-4xl lg:text-5xl font-bold text-charcoal mb-6">
-              {pages.contact.title}
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="font-['Zodiak'] text-2xl md:text-3xl lg:text-4xl font-bold text-charcoal mb-6">
+              Ready to Start Your Project?
             </h1>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              {pages.contact.description}
+            <p className="text-lg text-gray-700 mb-8">
+              Whether you're planning a complete home renovation, custom cabinetry, or building your dream home, 
+              we're here to bring your vision to life with quality craftsmanship and exceptional service.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button
+                onClick={handleQuoteClick}
+                className="bg-dark-brown-green hover:bg-brown-green text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform cursor-pointer"
+              >
+                Get Free Quote
+              </button>
+              <a
+                href="/services"
+                className="border-2 border-dark-brown-green hover:border-brown-green text-dark-brown-green hover:text-brown-green px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-dark-brown-green/5 cursor-pointer"
+              >
+                View Our Services
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Contact Information */}
+      {/* Contact Information - Now below the CTA */}
       <section className="py-16 lg:py-20">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
             
             {/* Contact Details */}
             <div className="space-y-8">
+              {/* Main heading */}
               <div>
-                <h2 className="font-['Zodiak'] text-2xl md:text-3xl font-bold text-charcoal mb-8">
+                <h2 className="font-['Zodiak'] text-3xl md:text-4xl lg:text-5xl font-bold text-charcoal mb-8">
                   Get In Touch
                 </h2>
               </div>
@@ -105,35 +121,6 @@ export default function Contact() {
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Horizon Renovations Showroom Location"
               />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Area */}
-      <section className="py-16 lg:py-20 bg-specials-bg">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-4xl mx-auto">
-            <h2 className="font-['Zodiak'] text-2xl md:text-3xl lg:text-4xl font-bold text-charcoal mb-6">
-              Ready to Start Your Project?
-            </h2>
-            <p className="text-lg text-gray-700 mb-8">
-              Whether you're planning a complete home renovation, custom cabinetry, or building your dream home, 
-              we're here to bring your vision to life with quality craftsmanship and exceptional service.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={handleQuoteClick}
-                className="bg-dark-brown-green hover:bg-brown-green text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform cursor-pointer"
-              >
-                Get Free Quote
-              </button>
-              <a
-                href="/services"
-                className="border-2 border-dark-brown-green hover:border-brown-green text-dark-brown-green hover:text-brown-green px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-dark-brown-green/5 cursor-pointer"
-              >
-                View Our Services
-              </a>
             </div>
           </div>
         </div>

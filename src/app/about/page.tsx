@@ -35,9 +35,8 @@ function useInView(threshold = 0.1) {
 }
 
 export default function About() {
-  const [missionRef, missionInView] = useInView(0.4)
+  const [introRef, introInView] = useInView(0.4)
   const [whyChooseUsRef, whyChooseUsInView] = useInView(0.2)
-  const [leadershipRef, leadershipInView] = useInView(0.1)
   const [showroomRef, showroomInView] = useInView(0.1)
   const [finalCtaRef, finalCtaInView] = useInView(0.2)
   const [heroLoaded, setHeroLoaded] = useState(false)
@@ -88,23 +87,23 @@ export default function About() {
         </div>
       </section>
 
-      {/* Mission Section */}
+      {/* Introduction Section - New Combined Section */}
       <section className="py-16 lg:py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div 
-              ref={missionRef}
+              ref={introRef}
               className={`transition-all duration-1000 ease-out ${
-                missionInView 
+                introInView 
                   ? 'opacity-100 translate-x-0' 
                   : 'opacity-0 -translate-x-12'
               }`}
             >
               <h2 className="font-['Zodiak'] text-2xl md:text-3xl lg:text-4xl font-bold text-charcoal mb-6">
-                {aboutPage.mission.title}
+                {aboutPage.introduction.title}
               </h2>
               <div className="space-y-6">
-                {aboutPage.mission.paragraphs.map((paragraph, index) => (
+                {aboutPage.introduction.paragraphs.map((paragraph, index) => (
                   <p key={index} className="text-gray-700 leading-relaxed">
                     {paragraph}
                   </p>
@@ -113,17 +112,17 @@ export default function About() {
             </div>
             <div 
               className={`relative transition-all duration-1000 ease-out delay-300 ${
-                missionInView 
+                introInView 
                   ? 'opacity-100 translate-x-0' 
                   : 'opacity-0 translate-x-12'
               }`}
             >
               <Image
-                src={aboutPage.mission.image}
-                alt={aboutPage.mission.imageAlt}
+                src={aboutPage.introduction.image}
+                alt={aboutPage.introduction.imageAlt}
                 width={600}
                 height={400}
-                className="rounded-lg shadow-xl w-full h-[300px] md:h-[400px] object-cover"
+                className="rounded-lg shadow-xl w-full h-[300px] md:h-[400px] object-cover object-top"
               />
             </div>
           </div>
@@ -198,50 +197,8 @@ export default function About() {
         </div>
       </section>
 
-      {/* Leadership Section */}
-      <section className="py-16 lg:py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div 
-              className={`lg:order-2 transition-all duration-1000 ease-out ${
-                leadershipInView 
-                  ? 'opacity-100 translate-x-0' 
-                  : 'opacity-0 translate-x-12'
-              }`}
-            >
-              <h2 className="font-['Zodiak'] text-2xl md:text-3xl lg:text-4xl font-bold text-charcoal mb-6">
-                {aboutPage.leadership.title}
-              </h2>
-              <div className="space-y-6">
-                {aboutPage.leadership.paragraphs.map((paragraph, index) => (
-                  <p key={index} className="text-gray-700 leading-relaxed">
-                    {paragraph}
-                  </p>
-                ))}
-              </div>
-            </div>
-            <div 
-              ref={leadershipRef}
-              className={`relative lg:order-1 transition-all duration-1000 ease-out delay-300 ${
-                leadershipInView 
-                  ? 'opacity-100 translate-x-0' 
-                  : 'opacity-0 -translate-x-12'
-              }`}
-            >
-              <Image
-                src={aboutPage.leadership.image}
-                alt={aboutPage.leadership.imageAlt}
-                width={600}
-                height={400}
-                className="rounded-lg shadow-xl w-full h-[300px] md:h-[400px] object-cover object-top"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Showroom Section */}
-      <section className="py-16 lg:py-20 bg-specials-bg">
+      <section className="py-16 lg:py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div 
@@ -262,7 +219,7 @@ export default function About() {
                   </p>
                 ))}
               </div>
-              <div className="mt-8 p-6 bg-white rounded-lg shadow-lg">
+              <div className="mt-8 p-6 bg-specials-bg rounded-lg shadow-lg">
                 <h3 className="font-semibold text-charcoal mb-2">Showroom Hours</h3>
                 <p className="text-gray-700 mb-2">
                   Monday – Friday 9:00 AM – 5:00 PM<br />
@@ -326,16 +283,10 @@ export default function About() {
               </a>
             </div>
             
-            <div className="flex items-center justify-center gap-2 text-cream/90">
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-              </svg>
-              <a 
-                href={`tel:${aboutPage.finalCta.phone}`}
-                className="text-lg font-semibold hover:text-warm-gold transition-colors cursor-pointer"
-              >
-                {aboutPage.finalCta.phone}
-              </a>
+            <div className="text-cream/70">
+              <p className="text-lg font-semibold">
+                Call us today: <a href="tel:919-542-4442" className="text-cream hover:text-white transition-colors cursor-pointer">{aboutPage.finalCta.phone}</a>
+              </p>
             </div>
           </div>
         </div>

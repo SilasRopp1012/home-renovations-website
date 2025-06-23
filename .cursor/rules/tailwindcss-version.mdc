@@ -1,0 +1,6 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+Make sure to use tailwindcss v4 syntax when making stylistic components/changed. The syntax differs quite a lot from v3, and using v3 syntax often results in errors. Stick with v4 syntax when possible.
