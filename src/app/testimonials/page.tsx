@@ -146,9 +146,9 @@ export default function Testimonials() {
                 </div>
 
                 {/* Testimonial Text */}
-                <blockquote className="text-gray-700 leading-relaxed mb-6 text-sm lg:text-base">
-                  "{testimonial.text}"
-                </blockquote>
+                <p className="text-gray-700 text-lg leading-relaxed text-center">
+                  &ldquo;{testimonial.text}&rdquo;
+                </p>
 
                 {/* Author Info */}
                 <div className="border-t border-gray-200 pt-4">

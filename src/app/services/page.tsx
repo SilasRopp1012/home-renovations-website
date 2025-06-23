@@ -1,8 +1,9 @@
 'use client'
 
 import { useState, useEffect, useLayoutEffect, useRef } from 'react'
-import { pages, siteContent, servicesPage } from '@/content/content'
+import { siteContent, servicesPage } from '@/content/content'
 import QuoteModal from '@/components/QuoteModal'
+import Image from 'next/image'
 
 // Custom hook for intersection observer
 function useInView(threshold = 0.1) {
@@ -65,7 +66,6 @@ export default function Services() {
   })
 
   // Refs for scroll animations  
-  const [heroRef, heroInView] = useInView(0.1)
   const [processRef, processInView] = useInView(0.1)
 
   // Handle initial hash positioning - BEFORE any animations
@@ -313,9 +313,11 @@ export default function Services() {
                 {/* Service Image */}
                 <div className="w-full lg:w-1/2">
                   <div className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-xl">
-                    <img
+                    <Image
                       src={service.image}
                       alt={service.alt}
+                      width={600}
+                      height={400}
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                     />
                   </div>
@@ -326,12 +328,10 @@ export default function Services() {
                   <h3 className="font-['Zodiak'] text-2xl lg:text-3xl font-bold text-dark-brown-green mb-4">
                     {service.title}
                   </h3>
-                  <p className="text-gray-700 text-lg mb-6 leading-relaxed">
-                    {service.description}
-                  </p>
+                  <p className="text-gray-600 text-lg mb-6">{service.description}</p>
                   
                   <div className="mb-8">
-                    <h4 className="font-['Zodiak'] font-semibold text-dark-brown-green mb-3">What's Included:</h4>
+                    <h4 className="font-['Zodiak'] font-semibold text-dark-brown-green mb-3">What`&apos;`s Included:</h4>
                     <ul className="space-y-2">
                       {service.features.map((feature, idx) => (
                         <li key={idx} className="flex items-start gap-3">
@@ -390,7 +390,7 @@ export default function Services() {
 
           <ScrollAnimatedDiv delay={600} className="text-center mt-12">
             <p className="text-lg text-gray-700 mb-6">
-              Don't see what you're looking for? We handle many other home improvement projects.
+              Don&apos;t see what you&apos;re looking for? We handle many other home improvement projects.
             </p>
             <button
               onClick={handleGetQuote}

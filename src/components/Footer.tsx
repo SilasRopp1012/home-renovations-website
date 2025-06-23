@@ -1,6 +1,6 @@
 'use client'
 
-import { footer, siteContent, pages } from '@/content/content'
+import { footer, siteContent } from '@/content/content'
 import { useState } from 'react'
 
 export default function Footer() {

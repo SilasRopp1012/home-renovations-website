@@ -57,7 +57,7 @@ export default function Testimonials() {
               <div className="flex-1 flex items-center justify-center overflow-hidden">
                 <div className="w-full max-h-full overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent">
                   <p className="text-gray-700 text-lg lg:text-xl leading-relaxed text-center px-4 py-2">
-                    "{currentReview.text}"
+                    &ldquo;{currentReview.text}&rdquo;
                   </p>
                 </div>
               </div>

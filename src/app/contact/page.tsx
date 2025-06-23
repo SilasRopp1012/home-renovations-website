@@ -25,8 +25,8 @@ export default function Contact() {
               Ready to Start Your Project?
             </h1>
             <p className="text-lg text-gray-700 mb-8">
-              Whether you're planning a complete home renovation, custom cabinetry, or building your dream home, 
-              we're here to bring your vision to life with quality craftsmanship and exceptional service.
+              Whether you&apos;re planning a complete home renovation, custom cabinetry, or building your dream home, 
+              we&apos;re here to bring your vision to life with quality craftsmanship and exceptional service.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button

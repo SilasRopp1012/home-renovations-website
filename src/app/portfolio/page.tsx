@@ -149,7 +149,7 @@ export default function Portfolio() {
               Ready to Start Your Project?
             </h2>
             <p className="text-lg text-gray-700 mb-8">
-              Let's discuss how we can transform your home with the same quality and craftsmanship you see in our portfolio.
+              Let&apos;s discuss how we can transform your home with the same quality and craftsmanship you see in our portfolio.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <button
